@@ -463,16 +463,22 @@ button { font-family: inherit; }
 /* ============================================================
    Tables
    ============================================================ */
-.table-wrap {
+.table-shell {
   position: relative;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.table-wrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  border: 1px solid var(--border);
   border-radius: var(--radius-md);
 }
 table { width: 100%; border-collapse: collapse; min-width: 560px; background: var(--paper); }
 
-.table-wrap::after {
+/* Fade lives on the non-scrolling shell, not the scroll container itself,
+   so it stays pinned to the viewport edge instead of scrolling with the
+   table content. */
+.table-shell::after {
   content: "";
   position: absolute;
   top: 0;
@@ -486,7 +492,7 @@ table { width: 100%; border-collapse: collapse; min-width: 560px; background: va
   transition: opacity 0.15s ease;
 }
 @media (max-width: 640px) {
-  .table-wrap.has-more-right::after { opacity: 1; }
+  .table-shell.has-more-right::after { opacity: 1; }
 }
 thead th {
   text-align: left;

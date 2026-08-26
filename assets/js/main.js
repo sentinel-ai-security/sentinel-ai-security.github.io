@@ -17,9 +17,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var tableWraps = document.querySelectorAll('.table-wrap');
   tableWraps.forEach(function (wrap) {
+    var shell = wrap.closest('.table-shell') || wrap;
     function updateFade() {
       var hasMore = wrap.scrollLeft + wrap.clientWidth < wrap.scrollWidth - 1;
-      wrap.classList.toggle('has-more-right', hasMore);
+      shell.classList.toggle('has-more-right', hasMore);
     }
     updateFade();
     wrap.addEventListener('scroll', updateFade, { passive: true });
