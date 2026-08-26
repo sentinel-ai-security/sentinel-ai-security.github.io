@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}{% if page.title %} · {% endif %}Sentinel AI</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  {% assign t = site.data.i18n[page.lang] %}
+  {% if page.lang == 'zh' %}
+    {% assign home_url = '/zh/' %}
+    {% assign product_url = '/zh/product/' %}
+    {% assign aal_url = '/zh/aal/' %}
+    {% assign use_cases_url = '/zh/use-cases/' %}
+    {% assign team_url = '/zh/team/' %}
+    {% assign company_url = '/zh/company/' %}
+    {% assign contact_url = '/zh/contact/' %}
+  {% else %}
+    {% assign home_url = '/en/' %}
+    {% assign product_url = '/en/product/' %}
+    {% assign aal_url = '/en/aal/' %}
+    {% assign use_cases_url = '/en/use-cases/' %}
+    {% assign team_url = '/en/team/' %}
+    {% assign company_url = '/en/company/' %}
+    {% assign contact_url = '/en/contact/' %}
+  {% endif %}
+  <a class="skip-link" href="#main">{% if page.lang == 'zh' %}跳转到主内容{% else %}Skip to content{% endif %}</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ home_url }}">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 2L24 6V13C24 19.5 19.8 24.7 14 26.5C8.2 24.7 4 19.5 4 13V6L14 2Z" fill="url(#shield-grad)"/>
+            <path d="M9.5 14.2L12.4 17.1L18.6 10.5" stroke="#0a1628" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="shield-grad" x1="4" y1="2" x2="24" y2="26.5" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#F7941D"/>
+                <stop offset="1" stop-color="#FFC15E"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="brand-name">SENTINEL<span class="brand-name-accent">.AI</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="{{ home_url }}" {% if page.nav == 'home' %}aria-current="page"{% endif %}>{{ t.nav.home }}</a>
+        <a href="{{ product_url }}" {% if page.nav == 'product' %}aria-current="page"{% endif %}>{{ t.nav.product }}</a>
+        <a href="{{ aal_url }}" {% if page.nav == 'aal' %}aria-current="page"{% endif %}>{{ t.nav.aal }}</a>
+        <a href="{{ use_cases_url }}" {% if page.nav == 'use_cases' %}aria-current="page"{% endif %}>{{ t.nav.use_cases }}</a>
+        <a href="{{ team_url }}" {% if page.nav == 'team' %}aria-current="page"{% endif %}>{{ t.nav.team }}</a>
+        <a href="{{ company_url }}" {% if page.nav == 'company' %}aria-current="page"{% endif %}>{{ t.nav.company }}</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="lang-switch" href="{{ t.lang_switch_href }}">{{ t.lang_switch_label }}</a>
+        <a class="btn btn-primary btn-sm" href="{{ contact_url }}">{{ t.cta_contact }}</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <a href="{{ home_url }}">{{ t.nav.home }}</a>
+      <a href="{{ product_url }}">{{ t.nav.product }}</a>
+      <a href="{{ aal_url }}">{{ t.nav.aal }}</a>
+      <a href="{{ use_cases_url }}">{{ t.nav.use_cases }}</a>
+      <a href="{{ team_url }}">{{ t.nav.team }}</a>
+      <a href="{{ company_url }}">{{ t.nav.company }}</a>
+      <a href="{{ contact_url }}">{{ t.nav.contact }}</a>
+      <a class="mobile-lang" href="{{ t.lang_switch_href }}">{{ t.lang_switch_label }}</a>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-name">SENTINEL<span class="brand-name-accent">.AI</span></span>
+          <p class="footer-tagline">{{ t.footer_tagline }}</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="{{ product_url }}">{{ t.nav.product }}</a>
+          <a href="{{ aal_url }}">{{ t.nav.aal }}</a>
+          <a href="{{ use_cases_url }}">{{ t.nav.use_cases }}</a>
+          <a href="{{ team_url }}">{{ t.nav.team }}</a>
+          <a href="{{ company_url }}">{{ t.nav.company }}</a>
+          <a href="{{ contact_url }}">{{ t.nav.contact }}</a>
+        </nav>
+      </div>
+      <p class="footer-note">{{ t.footer_note }}</p>
+      <p class="footer-rights">{{ t.footer_rights }}</p>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

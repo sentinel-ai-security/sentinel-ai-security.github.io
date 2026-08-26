@@ -1,0 +1,111 @@
+---
+layout: default
+lang: zh
+nav: contact
+permalink: /zh/contact/
+title: 联系我们
+description: >-
+  联系 Sentinel AI——洽谈设计合作伙伴关系、投资沟通或其他咨询。
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <span class="hero-eyebrow">联系我们</span>
+    <h1 style="max-width: 26ch;">聊聊你的 Agent 值得被赋予多大的信任</h1>
+    <p class="hero-sub">
+      无论你正在验收一个供应商交付的 Agent、探索设计合作伙伴关系，还是作为
+      投资人了解 Sentinel——欢迎告诉我们你正在做的事情。
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid grid-2" style="align-items: start;">
+    <div class="form-card">
+      <form id="contactForm">
+        <div class="form-row">
+          <label for="name">姓名</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">工作邮箱</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="company">公司</label>
+          <input type="text" id="company" name="company">
+        </div>
+        <div class="form-row">
+          <label for="topic">咨询类型</label>
+          <select id="topic" name="topic">
+            <option>设计合作伙伴 / 试点</option>
+            <option>投资洽谈</option>
+            <option>媒体 / 采访</option>
+            <option>加入我们</option>
+            <option>其他</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">留言</label>
+          <textarea id="message" name="message" placeholder="请告诉我们你的 Agent、它需要的权限，以及你希望解决的问题。"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">发送消息</button>
+        <p style="font-size: 0.82rem; color: var(--ink-400); margin-top: 14px;">
+          点击后将打开你的邮件客户端并预填内容——本页面不会直接提交任何信息。
+        </p>
+      </form>
+    </div>
+
+    <div class="contact-channels">
+      <div class="contact-channel">
+        <div class="card-icon">✉️</div>
+        <div>
+          <h4>邮箱</h4>
+          <p><a href="mailto:sentinelai268@gmail.com" style="color: var(--orange-600); font-weight:600;">sentinelai268@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="contact-channel">
+        <div class="card-icon">🤝</div>
+        <div>
+          <h4>设计合作伙伴</h4>
+          <p>我们正在金融、采购、内部工具与机器人场景中，挑选少量部署高权限 Agent 的企业展开合作。</p>
+        </div>
+      </div>
+      <div class="contact-channel">
+        <div class="card-icon">💼</div>
+        <div>
+          <h4>投资人</h4>
+          <p>可索取完整版白皮书——其中包含投资逻辑、路线图，以及我们正在验证的关键假设。</p>
+        </div>
+      </div>
+      <div class="contact-channel">
+        <div class="card-icon">📍</div>
+        <div>
+          <h4>业务布局</h4>
+          <p>英国研究根基（华威、布里斯托），深圳作为中国产业验证与落地基地。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var company = document.getElementById('company').value;
+    var topic = document.getElementById('topic').value;
+    var message = document.getElementById('message').value;
+
+    var subject = encodeURIComponent('Sentinel AI 咨询：' + topic);
+    var body = encodeURIComponent(
+      '姓名：' + name + '\n' +
+      '邮箱：' + email + '\n' +
+      '公司：' + company + '\n' +
+      '类型：' + topic + '\n\n' +
+      message
+    );
+    window.location.href = 'mailto:sentinelai268@gmail.com?subject=' + subject + '&body=' + body;
+  });
+</script>

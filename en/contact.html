@@ -1,0 +1,113 @@
+---
+layout: default
+lang: en
+nav: contact
+permalink: /en/contact/
+title: Contact
+description: >-
+  Get in touch with Sentinel AI — for design partnerships, investment
+  conversations, or general enquiries.
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <span class="hero-eyebrow">Contact</span>
+    <h1 style="max-width: 26ch;">Let's talk about what your agent needs to be trusted with</h1>
+    <p class="hero-sub">
+      Whether you're evaluating a vendor-delivered agent, exploring a design
+      partnership, or looking at Sentinel as an investor — tell us a bit
+      about what you're working on.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid grid-2" style="align-items: start;">
+    <div class="form-card">
+      <form id="contactForm">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Work email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company">
+        </div>
+        <div class="form-row">
+          <label for="topic">I'm reaching out about</label>
+          <select id="topic" name="topic">
+            <option>Design partnership / pilot</option>
+            <option>Investment</option>
+            <option>Press / media</option>
+            <option>Careers</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about the agent, the authority it needs, and what you're trying to solve."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Send message</button>
+        <p style="font-size: 0.82rem; color: var(--ink-400); margin-top: 14px;">
+          This opens your email client with your message pre-filled — nothing is submitted directly from this page.
+        </p>
+      </form>
+    </div>
+
+    <div class="contact-channels">
+      <div class="contact-channel">
+        <div class="card-icon">✉️</div>
+        <div>
+          <h4>Email</h4>
+          <p><a href="mailto:sentinelai268@gmail.com" style="color: var(--orange-600); font-weight:600;">sentinelai268@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="contact-channel">
+        <div class="card-icon">🤝</div>
+        <div>
+          <h4>Design partnerships</h4>
+          <p>We're selecting a small number of enterprises deploying high-authority agents in finance, procurement, internal tooling, and robotics.</p>
+        </div>
+      </div>
+      <div class="contact-channel">
+        <div class="card-icon">💼</div>
+        <div>
+          <h4>Investors</h4>
+          <p>Ask for the full whitepaper — it covers the investment thesis, roadmap, and the assumptions we're actively de-risking.</p>
+        </div>
+      </div>
+      <div class="contact-channel">
+        <div class="card-icon">📍</div>
+        <div>
+          <h4>Where we operate</h4>
+          <p>UK research roots (Warwick, Bristol) with Shenzhen as our China industrial validation and landing base.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var company = document.getElementById('company').value;
+    var topic = document.getElementById('topic').value;
+    var message = document.getElementById('message').value;
+
+    var subject = encodeURIComponent('Sentinel AI enquiry: ' + topic);
+    var body = encodeURIComponent(
+      'Name: ' + name + '\n' +
+      'Email: ' + email + '\n' +
+      'Company: ' + company + '\n' +
+      'Topic: ' + topic + '\n\n' +
+      message
+    );
+    window.location.href = 'mailto:sentinelai268@gmail.com?subject=' + subject + '&body=' + body;
+  });
+</script>

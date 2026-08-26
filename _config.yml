@@ -1,0 +1,29 @@
+title: Sentinel AI
+tagline: "Before AI acts, Sentinel verifies."
+description: >-
+  Sentinel AI is the AI Agent Assurance & Security Platform — independent
+  pre-deployment red-team verification, real-time runtime guardrails, and
+  continuous re-verification for enterprise AI agents.
+url: "https://sentinel-ai.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins: []
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+defaults:
+  - scope:
+      path: "en"
+    values:
+      lang: en
+  - scope:
+      path: "zh"
+    values:
+      lang: zh

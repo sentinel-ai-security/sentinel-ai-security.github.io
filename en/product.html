@@ -1,0 +1,199 @@
+---
+layout: default
+lang: en
+nav: product
+permalink: /en/product/
+title: Product
+description: >-
+  How Sentinel Assurance, Sentinel Guard and Continuous Assurance work
+  together to secure AI agents across their entire lifecycle.
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <span class="hero-eyebrow">Platform</span>
+    <h1 style="max-width: 26ch;">One closed loop, three moments of truth</h1>
+    <p class="hero-sub">
+      Sentinel doesn't sell three disconnected tools. Every agent moves
+      through the same lifecycle — verified before it goes live, guarded
+      while it runs, and re-verified whenever it changes.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Stage</th>
+            <th>Sentinel capability</th>
+            <th>Core question</th>
+            <th>Primary output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Before go-live</td>
+            <td>Sentinel Assurance</td>
+            <td>Is this agent, as a whole, safe enough to launch?</td>
+            <td>Independent red-team report, AAL rating, risk boundaries, remediation plan</td>
+          </tr>
+          <tr>
+            <td>In production</td>
+            <td>Sentinel Guard</td>
+            <td>Is this specific action safe to execute right now?</td>
+            <td>Allow / deny / human-in-the-loop, risk alerts &amp; audit evidence</td>
+          </tr>
+          <tr>
+            <td>On change</td>
+            <td>Continuous Assurance</td>
+            <td>Now that the model or environment changed, is it still safe?</td>
+            <td>Impact assessment, automated re-testing, updated evidence &amp; rating</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="eyebrow">01 — Before go-live</span>
+      <h2>Sentinel Assurance: independent third-party verification</h2>
+      <p class="lead">
+        Assurance plays the same role as third-party acceptance testing for
+        critical software, chips or security appliances: Sentinel doesn't
+        build the agent — we stand on the enterprise's side and
+        independently answer whether the system is ready to hold real
+        authority.
+      </p>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>How we evaluate</h3>
+        <ul style="margin-top: 14px;">
+          <li style="margin-bottom:12px; color:var(--ink-600); font-size:0.95rem;">Fix the evaluation boundary — model version, system prompt, tool interfaces, permissions, knowledge base and key business workflows.</li>
+          <li style="margin-bottom:12px; color:var(--ink-600); font-size:0.95rem;">Define the threat model — attacker capability, accessible information, budget, query count, model capability and reuse potential.</li>
+          <li style="margin-bottom:12px; color:var(--ink-600); font-size:0.95rem;">Run automated + human-led adversarial testing across malicious input, prompt injection, goal hijacking, tool misuse, privilege escalation and data exfiltration.</li>
+          <li style="margin-bottom:0; color:var(--ink-600); font-size:0.95rem;">Report more than pass/fail — quantify the cost, capability and evidence required to actually break the system.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>What you get</h3>
+        <ul style="margin-top: 14px;">
+          <li style="margin-bottom:12px; color:var(--ink-600); font-size:0.95rem;"><strong>An AAL rating</strong> — a quantified, comparable safety grade. <a href="/en/aal/" style="color:var(--orange-600); font-weight:600;">See the full framework →</a></li>
+          <li style="margin-bottom:12px; color:var(--ink-600); font-size:0.95rem;"><strong>Mapped risk boundaries</strong> — permission, sensitive-action, tool-call and data-access edges.</li>
+          <li style="margin-bottom:12px; color:var(--ink-600); font-size:0.95rem;"><strong>Remediation guidance</strong> — concrete fixes, with re-testing built into the loop.</li>
+          <li style="margin-bottom:0; color:var(--ink-600); font-size:0.95rem;"><strong>A reusable threat model</strong> — the foundation Guard is configured against.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="eyebrow">02 — In production</span>
+      <h2>Sentinel Guard: real-time runtime judgment</h2>
+      <p class="lead">
+        Assurance's conclusions are statistical evidence against a defined
+        threat model and test distribution — they can't guarantee every
+        future action is safe. Once an agent is live, Guard sits as a
+        runtime security layer, watching every high-risk action and making
+        a call before it executes.
+      </p>
+    </div>
+
+    <div class="grid grid-4">
+      <div class="card">
+        <div class="card-icon">🔎</div>
+        <h3>Input side</h3>
+        <p>Detects malicious input, indirect prompt injection, content tampering and anomalous context.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🧭</div>
+        <h3>Decision side</h3>
+        <p>Checks whether the current action matches the task goal, history, and the boundaries established at Assurance.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔑</div>
+        <h3>Permission side</h3>
+        <p>Judges whether a tool call, data access or external action exceeds authority or business rules.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Execution side</h3>
+        <p>Low risk: allow. High risk: block, downgrade, or escalate to a human — with the responsible owner notified.</p>
+      </div>
+    </div>
+
+    <div class="callout mt-lg">
+      In the software era, antivirus software guarded files, processes and
+      networks. In the agent era, Sentinel guards the data access, tool
+      calls and decision-execution rights an AI has been granted.
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="wrap">
+    <div class="section-header">
+      <span class="eyebrow">03 — On change</span>
+      <h2>Continuous Assurance: why safety has to be re-verified</h2>
+      <p class="lead">
+        Agents are highly dynamic software systems. Model upgrades, prompt
+        edits, RAG data changes, new MCP/tools, permission changes, and even
+        improvements in attacker capability can all invalidate a prior
+        safety conclusion. Sentinel binds every safety conclusion to a
+        specific configuration.
+      </p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card" style="background: var(--navy-850); border-color: var(--border-dark);">
+        <h3 style="color:var(--paper);">Change detection</h3>
+        <p style="color:rgba(255,255,255,0.65);">Model, prompt, RAG, tool, permission and attack-capability changes are tracked continuously.</p>
+      </div>
+      <div class="card" style="background: var(--navy-850); border-color: var(--border-dark);">
+        <h3 style="color:var(--paper);">Impact assessment</h3>
+        <p style="color:rgba(255,255,255,0.65);">Every change is evaluated against the existing AAL boundary before anything breaks in production.</p>
+      </div>
+      <div class="card" style="background: var(--navy-850); border-color: var(--border-dark);">
+        <h3 style="color:var(--paper);">Automated re-testing</h3>
+        <p style="color:rgba(255,255,255,0.65);">Test cases regenerate automatically; Guard's real-world interception data feeds the next Assurance cycle.</p>
+      </div>
+    </div>
+
+    <div class="mt-lg">
+      <div class="flywheel">
+        <span class="fw-step">More Assurance</span>
+        <span class="fw-arrow">→</span>
+        <span class="fw-step">More attack traces</span>
+        <span class="fw-arrow">→</span>
+        <span class="fw-step">Stronger Guard</span>
+        <span class="fw-arrow">→</span>
+        <span class="fw-step">More production evidence</span>
+        <span class="fw-arrow">→</span>
+        <span class="fw-step">Sharper Assurance</span>
+        <span class="fw-arrow">→</span>
+        <span class="fw-step">Lower cost per cycle</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>See how Assurance, Guard and Continuous Assurance fit your stack</h2>
+      <p>Tell us about the agent you're deploying and the authority it needs — we'll walk through what an engagement looks like.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/en/contact/">Talk to us</a>
+    </div>
+  </div>
+</section>
