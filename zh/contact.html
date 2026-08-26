@@ -21,7 +21,7 @@ description: >-
 <section class="section">
   <div class="wrap grid grid-2" style="align-items: start;">
     <div class="form-card">
-      <form id="contactForm">
+      <form id="contactForm" action="https://formspree.io/f/maeywegg" method="POST">
         <div class="form-row">
           <label for="name">姓名</label>
           <input type="text" id="name" name="name" required>
@@ -48,10 +48,9 @@ description: >-
           <label for="message">留言</label>
           <textarea id="message" name="message" placeholder="请告诉我们你的Agent、它需要的权限，以及你希望解决的问题。"></textarea>
         </div>
+        <input type="hidden" name="_subject" value="Sentinel AI 咨询">
         <button type="submit" class="btn btn-primary btn-lg">发送消息</button>
-        <p style="font-size: 0.82rem; color: var(--ink-400); margin-top: 14px;">
-          点击后将打开你的邮件客户端并预填内容。本页面不会直接提交任何信息。
-        </p>
+        <p id="formStatus" class="form-status" role="status"></p>
       </form>
     </div>
 
@@ -82,22 +81,38 @@ description: >-
 </section>
 
 <script>
-  document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var company = document.getElementById('company').value;
-    var topic = document.getElementById('topic').value;
-    var message = document.getElementById('message').value;
+  (function () {
+    var form = document.getElementById('contactForm');
+    var status = document.getElementById('formStatus');
+    var submitBtn = form.querySelector('button[type="submit"]');
 
-    var subject = encodeURIComponent('Sentinel AI咨询：' + topic);
-    var body = encodeURIComponent(
-      '姓名：' + name + '\n' +
-      '邮箱：' + email + '\n' +
-      '公司：' + company + '\n' +
-      '类型：' + topic + '\n\n' +
-      message
-    );
-    window.location.href = 'mailto:sentinelai268@gmail.com?subject=' + subject + '&body=' + body;
-  });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = '发送中…';
+      status.textContent = '';
+      status.className = 'form-status';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          form.reset();
+          status.textContent = '已收到，我们会尽快与你联系。';
+          status.className = 'form-status form-status-success';
+        } else {
+          status.textContent = '提交失败，请直接发邮件至 sentinelai268@gmail.com。';
+          status.className = 'form-status form-status-error';
+        }
+      }).catch(function () {
+        status.textContent = '提交失败，请直接发邮件至 sentinelai268@gmail.com。';
+        status.className = 'form-status form-status-error';
+      }).finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = '发送消息';
+      });
+    });
+  })();
 </script>

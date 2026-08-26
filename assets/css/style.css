@@ -649,6 +649,14 @@ tbody td:first-child { font-weight: 700; color: var(--navy-800); white-space: no
   background: var(--paper);
 }
 
+.form-status {
+  font-size: 0.86rem;
+  margin-top: 14px;
+  min-height: 1.2em;
+}
+.form-status-success { color: #1a7f4e; font-weight: 600; }
+.form-status-error { color: #c53030; font-weight: 600; }
+
 .contact-channels { display: grid; gap: 18px; }
 .contact-channel {
   display: flex;
