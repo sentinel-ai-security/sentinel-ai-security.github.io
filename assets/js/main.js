@@ -14,4 +14,15 @@ document.addEventListener('DOMContentLoaded', function () {
       toggle.setAttribute('aria-expanded', 'false');
     });
   });
+
+  var tableWraps = document.querySelectorAll('.table-wrap');
+  tableWraps.forEach(function (wrap) {
+    function updateFade() {
+      var hasMore = wrap.scrollLeft + wrap.clientWidth < wrap.scrollWidth - 1;
+      wrap.classList.toggle('has-more-right', hasMore);
+    }
+    updateFade();
+    wrap.addEventListener('scroll', updateFade, { passive: true });
+    window.addEventListener('resize', updateFade);
+  });
 });
