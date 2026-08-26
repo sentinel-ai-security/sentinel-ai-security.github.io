@@ -1,5 +1,5 @@
 /* ============================================================
-   Sentinel AI — design tokens
+   Sentinel AI design tokens
    ============================================================ */
 :root {
   --navy-950: #060e1c;
@@ -463,8 +463,28 @@ button { font-family: inherit; }
 /* ============================================================
    Tables
    ============================================================ */
-.table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius-md); }
+.table-wrap {
+  position: relative;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
 table { width: 100%; border-collapse: collapse; min-width: 560px; background: var(--paper); }
+
+@media (max-width: 640px) {
+  .table-wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 28px;
+    background: linear-gradient(to right, transparent, rgba(10, 24, 48, 0.10));
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    pointer-events: none;
+  }
+}
 thead th {
   text-align: left;
   background: var(--navy-900);

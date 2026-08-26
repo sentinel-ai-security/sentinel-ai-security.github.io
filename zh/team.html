@@ -5,19 +5,16 @@ nav: team
 permalink: /zh/team/
 title: 团队
 description: >-
-  Sentinel AI 创始团队汇聚统计机器学习、AI 安全与可信 AI 研究背景，来自
-  华威大学与布里斯托大学。
+  Sentinel AI由三位联合创始人共同创立，分别专注于统计机器学习、AI安全
+  与可信AI。
 ---
 
 <section class="hero" style="padding: 72px 0 80px;">
   <div class="wrap">
     <span class="hero-eyebrow">团队</span>
-    <h1 style="max-width: 28ch;">三个研究方向，一个技术闭环</h1>
+    <h1 style="max-width: 26ch;">我们的团队</h1>
     <p class="hero-sub">
-      支撑这一闭环需要回答四个问题：如何量化一个 Agent 有多安全？如何找到
-      它为什么不安全？如何阻止危险行为？又如何证明修复以后真的更安全？这
-      恰好对应三位联合创始人的互补研究背景——<strong>Measure → Attack &amp;
-      Attribute → Protect &amp; Re-verify。</strong>
+      Sentinel AI由三位研究者共同创立，各自在如何量化、攻击与防御AI Agent上带来不同的技术专长。
     </p>
   </div>
 </section>
@@ -28,83 +25,32 @@ description: >-
       <div class="team-card">
         <div class="team-avatar">WX</div>
         <h3>Dr. Wenkai Xu</h3>
-        <span class="team-role">联合创始人 &amp; 首席科学家 — Measure</span>
-        <span class="team-affiliation">统计机器学习，华威大学（University of Warwick）</span>
-        <p>
-          Wenkai 负责 Sentinel 的科学方法、统计验证与 AAL 方法体系。其研究
-          聚焦统计假设检验、分布比较与可解释机器学习。他的核心任务是把
-          "我们测试了很多攻击" 升级为 "我们能够量化这个 Agent 在什么威胁
-          模型下有多安全"——这构成 Sentinel 统计安全验证和 AAL 的数学基础。
-        </p>
-        <div class="team-badges">
-          <span>NeurIPS</span>
-          <span>ICML</span>
-          <span>JMLR</span>
-          <span>NeurIPS Best Paper Award</span>
-          <span>Alexey Chervonenkis Award</span>
-        </div>
+        <span class="team-role">联合创始人</span>
+        <span class="team-affiliation">华威大学（University of Warwick）</span>
+        <p>统计机器学习：统计假设检验、分布比较与可解释机器学习。</p>
       </div>
 
       <div class="team-card">
         <div class="team-avatar">LW</div>
         <h3>Dr. Lichao Wu</h3>
-        <span class="team-role">联合创始人 &amp; CTO — Attack &amp; Attribute</span>
-        <span class="team-affiliation">网络安全，布里斯托大学（University of Bristol）</span>
-        <p>
-          Lichao 负责 Sentinel 的总体技术架构、AI 安全能力与产品工程化。
-          其研究聚焦对抗建模、系统安全与智能系统安全机理分析——不仅研究
-          "怎样攻击这个 Agent"，还研究 "为什么攻击能够成功，风险发生在
-          输入、模型内部、工具调用还是系统权限边界"。这一能力既支撑
-          Assurance 的独立 Red Teaming，也支撑 Guard 的实时异常判断。
-        </p>
-        <div class="team-badges">
-          <span>USENIX Security</span>
-          <span>NDSS</span>
-          <span>CHES</span>
-          <span>NDSS'26 Distinguished Paper Award</span>
-        </div>
+        <span class="team-role">联合创始人</span>
+        <span class="team-affiliation">布里斯托大学（University of Bristol）</span>
+        <p>网络安全：对抗建模、系统安全与AI系统漏洞分析。</p>
       </div>
 
       <div class="team-card">
         <div class="team-avatar">NL</div>
         <h3>Dr. Nan Lu</h3>
-        <span class="team-role">联合创始人 &amp; CEO — Protect &amp; Re-verify</span>
-        <span class="team-affiliation">人工智能与可信 AI，布里斯托大学（University of Bristol）</span>
-        <p>
-          Nan 负责公司整体战略、产品定义、市场、客户、融资与合作，并统筹
-          团队推进。其研究聚焦分布偏移下的鲁棒学习、弱监督学习与机器
-          遗忘——解决 "发现风险以后，怎样让 AI 恢复安全，并证明它仍然值得
-          信赖" 的问题，支撑 Sentinel 从发现问题走向风险干预、运行时保护
-          和持续再验证。
-        </p>
-        <div class="team-badges">
-          <span>NeurIPS</span>
-          <span>ICML</span>
-          <span>ICLR</span>
-          <span>NeurIPS Spotlight</span>
-          <span>ACML Best Paper Award</span>
-        </div>
+        <span class="team-role">联合创始人</span>
+        <span class="team-affiliation">布里斯托大学（University of Bristol）</span>
+        <p>可信AI：分布偏移下的鲁棒学习、弱监督学习与机器遗忘。</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section-dark">
-  <div class="wrap">
-    <div class="section-header center">
-      <span class="eyebrow">我们要构建的</span>
-      <h2>不是一次性检测工具，而是持续增强的信任闭环</h2>
-      <p class="lead">
-        竞争者可以复制某一种攻击方法，可以增加一个 Guardrail，也可以生成
-        一份安全报告；但 Sentinel 希望长期积累的是"攻击—行为—风险—干预—
-        再验证"之间的数据与方法闭环，并随着更多企业 Agent 接入持续增强。
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap cta-banner">
+<section class="section section-alt">
+  <div class="wrap cta-banner" style="background: linear-gradient(120deg, var(--navy-950), var(--navy-800) 60%, var(--navy-700));">
     <div>
       <h2>想和创始团队聊聊？</h2>
       <p>我们正在积极接触设计合作伙伴与早期投资人。</p>

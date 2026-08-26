@@ -13,16 +13,13 @@ en:
   footer_tagline: "Before AI acts, Sentinel verifies."
   footer_rights: "© 2026 Sentinel AI. All rights reserved."
   footer_note: >-
-    Sentinel AI's business model, product roadmap, AAL framework and
-    milestones reflect current startup hypotheses under active validation
-    with customers, engineering practice, and standards bodies — they should
-    not be read as regulatory certification or fully realized product
-    capability.
+    AAL is Sentinel AI's own rating framework, not an official regulatory
+    certification.
 zh:
   nav:
     home: 首页
     product: 产品
-    aal: AAL 安全等级
+    aal: AAL安全等级
     use_cases: 应用场景
     team: 团队
     company: 公司
@@ -30,9 +27,7 @@ zh:
   cta_contact: 联系我们
   lang_switch_label: English
   lang_switch_href: /en/
-  footer_tagline: "在 AI 行动之前，先问 Sentinel。"
+  footer_tagline: "在AI行动之前，先问Sentinel。"
   footer_rights: "© 2026 Sentinel AI 未然科技。保留所有权利。"
   footer_note: >-
-    白皮书与本网站中的商业模式、产品路线、AAL 体系和未来里程碑属于 Sentinel
-    当前创业假设，需要通过客户、工程与标准合作持续验证；不应被理解为已取得监管认证
-    或已实现全部产品能力。
+    AAL是Sentinel AI自有的评级体系，并非官方监管认证。
