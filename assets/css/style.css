@@ -691,3 +691,43 @@ tbody td:first-child { font-weight: 700; color: var(--navy-800); white-space: no
   color: var(--navy-800);
 }
 .divider { height: 1px; background: var(--border); border: none; margin: 48px 0; }
+
+/* ============================================================
+   Cookie consent banner
+   ============================================================ */
+.cookie-consent {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 18px 22px;
+  background: var(--navy-950);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+.cookie-consent[hidden] { display: none; }
+.cookie-consent p {
+  margin: 0;
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.75);
+  flex: 1 1 320px;
+}
+.cookie-consent-actions {
+  display: flex;
+  gap: 10px;
+  flex: none;
+}
+.cookie-consent .btn-outline {
+  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.cookie-consent .btn-outline:hover { border-color: var(--paper); color: var(--paper); }

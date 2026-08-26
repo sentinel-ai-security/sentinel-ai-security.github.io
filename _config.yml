@@ -6,6 +6,7 @@ description: >-
   continuous re-verification for enterprise AI agents.
 url: "https://sentinel-ai.github.io"
 baseurl: ""
+ga_id: "G-6G1ZK8E02C"
 
 # Build settings
 markdown: kramdown

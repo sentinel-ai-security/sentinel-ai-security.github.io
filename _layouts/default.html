@@ -106,6 +106,15 @@
     </div>
   </footer>
 
+  <div class="cookie-consent" id="cookieConsent" data-ga-id="{{ site.ga_id }}" hidden>
+    <p>{{ t.consent_message }}</p>
+    <div class="cookie-consent-actions">
+      <button type="button" class="btn btn-outline btn-sm" id="consentDecline">{{ t.consent_decline }}</button>
+      <button type="button" class="btn btn-primary btn-sm" id="consentAccept">{{ t.consent_accept }}</button>
+    </div>
+  </div>
+
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/consent.js' | relative_url }}"></script>
 </body>
 </html>
