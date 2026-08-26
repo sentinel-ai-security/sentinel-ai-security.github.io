@@ -1,4 +1,4 @@
-# sentinel-ai.github.io
+# sentinel-ai-security.github.io
 
 Marketing site for Sentinel AI, built as a bilingual (EN/ZH) Jekyll site for
 GitHub Pages.
@@ -41,7 +41,9 @@ Then open http://localhost:4000/en/.
 
 ## Deploying
 
-Push to the `main` branch of a repo named `sentinel-ai.github.io` under the
-`sentinel-ai-security` GitHub org/account. GitHub Pages will build the
+Push to the `main` branch of the `sentinel-ai-security.github.io` repo
+under the `sentinel-ai-security` GitHub org. GitHub Pages will build the
 Jekyll site automatically — no separate build step or `gh-pages` branch is
-needed.
+needed. The repo name must match the org name exactly for GitHub to serve
+it at the bare `sentinel-ai-security.github.io` domain rather than nested
+under a project path.
