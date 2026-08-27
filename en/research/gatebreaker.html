@@ -1,0 +1,83 @@
+---
+layout: default
+lang: en
+nav: research
+permalink: /en/research/gatebreaker/
+title: "GateBreaker: Gate-Guided Attacks on Mixture-of-Expert LLMs"
+description: >-
+  Our paper on attacking safety alignment in Mixture-of-Experts LLMs was
+  accepted at USENIX Security 2026. Here's what GateBreaker found.
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <span class="hero-eyebrow">Research</span>
+    <h1 style="max-width: 30ch;">GateBreaker: our attack on Mixture-of-Experts LLM safety, accepted at USENIX Security 2026</h1>
+    <p class="hero-sub">
+      Most safety research targets dense models. We found that
+      Mixture-of-Experts models concentrate their safety mechanisms in a
+      small, exploitable set of routed experts, and built the first attack
+      that targets that structure directly.
+    </p>
+    <div class="post-meta">
+      <span>By the Sentinel AI team</span>
+      <span>·</span>
+      <span>August 2026</span>
+      <span>·</span>
+      <a href="https://www.usenix.org/conference/usenixsecurity26/presentation/wu-lichao" target="_blank" rel="noopener">Read the paper on USENIX ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-body">
+    <a class="post-back" href="/en/research/">← Back to Research</a>
+
+    <p>
+      Our paper, <strong>"GateBreaker: Gate-Guided Attacks on
+      Mixture-of-Expert LLMs,"</strong> has been accepted at USENIX
+      Security 2026, one of the top four venues in computer security. The
+      work is co-authored by Sentinel AI co-founder Lichao Wu, together
+      with Sasha Behrouzi, Mohamadreza Rostami, and Ahmad-Reza Sadeghi
+      (Technical University of Darmstadt), and Stjepan Picek (University
+      of Zagreb &amp; Radboud University).
+    </p>
+
+    <h2>What GateBreaker does</h2>
+    <p>
+      Mixture-of-Experts (MoE) models scale by activating only a sparse
+      subset of their parameters for each input, which changes where and
+      how safety mechanisms end up living inside the model. GateBreaker is
+      the first training-free attack framework built specifically for that
+      structure. It works in three stages: find the "safety experts" that
+      a harmful prompt disproportionately gets routed to, localize the
+      safety structure inside them, then disable it.
+    </p>
+    <ul>
+      <li>Training-free, lightweight, and architecture-agnostic — no fine-tuning required.</li>
+      <li>Disabling at most 2.9% of the neurons in targeted expert layers raised average attack success from 7.4% to 64.9% across eight of the latest aligned MoE models.</li>
+      <li>Safety neurons transfer across models in the same family: one-shot transfer attacks reach 67.7% success.</li>
+      <li>Generalizes to vision-language MoE models too, with a 60.9% success rate across five VLMs on unsafe image inputs.</li>
+      <li>Utility degradation stays limited even after the targeted neurons are disabled.</li>
+    </ul>
+    <p>
+      The transfer result is the one worth sitting with. If a safety
+      weakness in one MoE model predicts the same weakness in its
+      siblings, testing a single checkpoint and calling the whole family
+      safe isn't enough.
+    </p>
+
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>Want to talk to the research team?</h2>
+      <p>We're always happy to discuss the work behind Sentinel, or how it applies to your AI agents.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/en/contact/">Talk to us</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,64 @@
+---
+layout: default
+lang: zh
+nav: research
+permalink: /zh/research/gatebreaker/
+title: "GateBreaker：针对混合专家大模型的门控引导攻击"
+description: >-
+  我们关于攻击混合专家（MoE）大模型安全对齐的论文被USENIX Security 2026录用。这篇文章介绍GateBreaker的研究发现。
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <span class="hero-eyebrow">研究</span>
+    <h1 style="max-width: 34ch;">GateBreaker：我们针对混合专家大模型安全对齐的攻击研究被USENIX Security 2026录用</h1>
+    <p class="hero-sub">
+      过去的安全研究大多针对稠密模型。我们发现，混合专家（MoE）模型的安全机制集中在一小部分被路由到的专家中，而这一结构本身就可以被直接攻击。
+    </p>
+    <div class="post-meta">
+      <span>Sentinel AI团队</span>
+      <span>·</span>
+      <span>2026年8月</span>
+      <span>·</span>
+      <a href="https://www.usenix.org/conference/usenixsecurity26/presentation/wu-lichao" target="_blank" rel="noopener">在USENIX阅读论文 ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-body">
+    <a class="post-back" href="/zh/research/">← 返回研究</a>
+
+    <p>
+      我们的论文《GateBreaker: Gate-Guided Attacks on Mixture-of-Expert LLMs》被USENIX Security 2026录用，这是计算机安全领域的顶级会议之一。这项研究由Sentinel AI联合创始人Lichao Wu，与达姆施塔特工业大学的Sasha Behrouzi、Mohamadreza Rostami、Ahmad-Reza Sadeghi，以及萨格勒布大学与拉德堡德大学的Stjepan Picek共同完成。
+    </p>
+
+    <h2>GateBreaker做了什么</h2>
+    <p>
+      混合专家（MoE）模型通过为每次输入仅激活一小部分参数来实现规模扩展，这也改变了安全机制在模型内部的存在方式。GateBreaker是首个专门针对这一结构设计的免训练攻击框架。它分三个阶段完成：找到有害提示词会被过度路由到的"安全专家"，定位这些专家内部的安全结构，然后将其关闭。
+    </p>
+    <ul>
+      <li>免训练、轻量级、与架构无关，无需任何微调。</li>
+      <li>在目标专家层中最多关闭2.9%的神经元，就能让8个最新的对齐MoE模型的平均攻击成功率从7.4%提升到64.9%。</li>
+      <li>这些安全神经元可以在同一模型家族内迁移：一次性迁移攻击的成功率达到67.7%。</li>
+      <li>该方法同样适用于视觉语言MoE模型，在5个模型上针对不安全图像输入的成功率达到60.9%。</li>
+      <li>即使关闭了目标神经元，模型的可用性下降也十分有限。</li>
+    </ul>
+    <p>
+      迁移能力这一点最值得关注。如果一个MoE模型的安全弱点能够预示同一家族其他模型的弱点，那么只测试单个模型版本就宣称整个家族安全，是远远不够的。
+    </p>
+
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>想和研究团队聊聊？</h2>
+      <p>我们很乐意分享Sentinel背后的研究工作，或探讨它如何应用于你的AI Agent。</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/zh/contact/">联系我们</a>
+    </div>
+  </div>
+</section>
