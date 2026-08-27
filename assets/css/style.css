@@ -720,7 +720,6 @@ tbody td:first-child { font-weight: 700; color: var(--navy-800); white-space: no
 }
 .research-card h3 { font-size: 1.22rem; color: var(--navy-900); margin-bottom: 10px; }
 .research-card p { font-size: 0.96rem; margin-bottom: 16px; }
-.research-card-date { font-size: 0.82rem; color: var(--ink-400); font-weight: 600; }
 
 .post-meta {
   display: flex;
