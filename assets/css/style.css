@@ -545,7 +545,7 @@ tbody td:first-child { font-weight: 700; color: var(--navy-800); white-space: no
   box-shadow: var(--shadow-sm);
 }
 .team-avatar {
-  width: 88px; height: 88px;
+  width: 128px; height: 128px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
