@@ -1,0 +1,72 @@
+---
+layout: default
+lang: zh
+nav: research
+permalink: /zh/research/neurostrike/
+title: "NeuroStrike：对齐大模型的神经元级攻击"
+description: >-
+  我们关于对齐大模型神经元级攻击的论文被NDSS Symposium 2026录用。这篇文章介绍
+  NeuroStrike的研究发现，以及它对Sentinel验收方法的意义。
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <span class="hero-eyebrow">研究</span>
+    <h1 style="max-width: 30ch;">NeuroStrike：我们针对LLM安全对齐的攻击研究被NDSS 2026录用</h1>
+    <p class="hero-sub">
+      一个大模型的整套安全对齐，可能只由极少数神经元支撑。我们的论文展示了如何找到它们，以及关闭它们之后会发生什么。
+    </p>
+    <div class="post-meta">
+      <span>Sentinel AI团队</span>
+      <span>·</span>
+      <span>2026年8月</span>
+      <span>·</span>
+      <a href="https://www.ndss-symposium.org/ndss-paper/neurostrike-neuron-level-attacks-on-aligned-llms/" target="_blank" rel="noopener">在NDSS阅读论文 ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-body">
+    <a class="post-back" href="/zh/research/">← 返回研究</a>
+
+    <p>
+      我们的论文《NeuroStrike: Neuron-Level Attacks on Aligned LLMs》被NDSS Symposium 2026录用，这是网络与系统安全领域的顶级会议之一。这项研究由Sentinel AI联合创始人Lichao Wu，与达姆施塔特工业大学的Sasha Behrouzi、Mohamadreza Rostami、Maximilian Thang、Ahmad-Reza Sadeghi，以及萨格勒布大学与拉德堡德大学的Stjepan Picek共同完成。
+    </p>
+
+    <h2>NeuroStrike做了什么</h2>
+    <p>
+      经过对齐的大模型会拒绝有害或违反政策的请求，靠的是特定的内部机制，而不是模型"理解"了请求有问题。NeuroStrike找到了触发这种拒绝行为的一小部分神经元，并将它们抑制。
+    </p>
+    <ul>
+      <li>在20多个开源与闭源模型上完成测试。</li>
+      <li>移除不到0.6%的神经元，就能让模型的安全对齐几乎完全失效。</li>
+      <li>白盒场景（攻击者可访问模型）下平均攻击成功率达76.9%。</li>
+      <li>黑盒场景（攻击者无法访问模型）下平均攻击成功率达63.7%。</li>
+      <li>这些"安全神经元"在微调和蒸馏后的模型变体中依然存在，攻击成功率同样保持在77%至78%左右。</li>
+    </ul>
+    <p>
+      最后一点最值得关注。修复基础模型的对齐问题，并不能可靠地修复在它之上构建的一切。一个微调或蒸馏出的变体，即使原始模型已被加固，也可能继承同样的结构性弱点。
+    </p>
+
+    <h2>这对Sentinel意味着什么</h2>
+    <p>
+      这正是Sentinel Assurance致力于发现的那类风险：不是一句恰好绕过过滤器的巧妙提示词，而是对齐机制本身存在的结构性缺口。提示词层面的越狱测试无法发现这种问题，找到它需要理解模型内部究竟发生了什么，而不只是看它输出了什么。
+    </p>
+    <p>
+      这正是Sentinel红队方法背后的研究基础：攻击系统，再精确归因这次攻击为何成功，直至具体机制。这也是我们在为AI Agent赋予真实权限之前，对其进行评估时所秉持的同一套方法论。
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>想和研究团队聊聊？</h2>
+      <p>我们很乐意分享Sentinel背后的研究工作，或探讨它如何应用于你的AI Agent。</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/zh/contact/">联系我们</a>
+    </div>
+  </div>
+</section>

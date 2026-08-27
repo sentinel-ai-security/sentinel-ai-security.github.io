@@ -692,6 +692,71 @@ tbody td:first-child { font-weight: 700; color: var(--navy-800); white-space: no
 .footer-rights { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin: 0; }
 
 /* ============================================================
+   Research
+   ============================================================ */
+.research-grid { display: grid; gap: 22px; }
+.research-card {
+  display: block;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.research-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.research-card-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--orange-600);
+  background: var(--orange-100);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+.research-card h3 { font-size: 1.22rem; color: var(--navy-900); margin-bottom: 10px; }
+.research-card p { font-size: 0.96rem; margin-bottom: 16px; }
+.research-card-date { font-size: 0.82rem; color: var(--ink-400); font-weight: 600; }
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+.post-meta a { color: var(--orange-300); font-weight: 600; }
+.post-meta a:hover { color: var(--orange-200, var(--orange-300)); }
+
+.post-body { max-width: 720px; margin: 0 auto; }
+.post-body p { font-size: 1.03rem; line-height: 1.75; color: var(--ink-700); }
+.post-body h2 {
+  font-size: 1.4rem;
+  color: var(--navy-900);
+  margin-top: 44px;
+  margin-bottom: 16px;
+}
+.post-body ul { margin: 0 0 24px; padding-left: 22px; list-style: disc; }
+.post-body li { margin-bottom: 10px; color: var(--ink-600); font-size: 1.02rem; line-height: 1.6; }
+.post-body strong { color: var(--navy-900); }
+.post-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--orange-600);
+  margin-bottom: 28px;
+}
+.post-back:hover { color: var(--orange-500); }
+
+/* ============================================================
    Misc utility
    ============================================================ */
 .text-center { text-align: center; }

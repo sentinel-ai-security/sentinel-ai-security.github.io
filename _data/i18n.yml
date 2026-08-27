@@ -6,6 +6,7 @@ en:
     use_cases: Use Cases
     team: Team
     company: Company
+    research: Research
     contact: Contact
   cta_contact: Talk to us
   lang_switch_label: 中文
@@ -26,6 +27,7 @@ zh:
     use_cases: 应用场景
     team: 团队
     company: 公司
+    research: 研究
     contact: 联系我们
   cta_contact: 联系我们
   lang_switch_label: English

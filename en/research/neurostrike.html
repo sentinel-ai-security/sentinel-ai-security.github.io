@@ -1,0 +1,96 @@
+---
+layout: default
+lang: en
+nav: research
+permalink: /en/research/neurostrike/
+title: "NeuroStrike: Neuron-Level Attacks on Aligned LLMs"
+description: >-
+  Our paper on neuron-level attacks against aligned LLMs was accepted at
+  NDSS Symposium 2026. Here's what NeuroStrike found, and why it matters
+  for how Sentinel tests AI agents.
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <span class="hero-eyebrow">Research</span>
+    <h1 style="max-width: 30ch;">NeuroStrike: our attack on LLM safety alignment is heading to NDSS 2026</h1>
+    <p class="hero-sub">
+      A tiny fraction of neurons hold up an LLM's entire safety alignment.
+      Our paper shows how to find them, and what happens when you turn
+      them off.
+    </p>
+    <div class="post-meta">
+      <span>By the Sentinel AI team</span>
+      <span>·</span>
+      <span>August 2026</span>
+      <span>·</span>
+      <a href="https://www.ndss-symposium.org/ndss-paper/neurostrike-neuron-level-attacks-on-aligned-llms/" target="_blank" rel="noopener">Read the paper on NDSS ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-body">
+    <a class="post-back" href="/en/research/">← Back to Research</a>
+
+    <p>
+      Our paper, <strong>"NeuroStrike: Neuron-Level Attacks on Aligned
+      LLMs,"</strong> has been accepted at NDSS Symposium 2026, one of the
+      top venues in network and systems security. The work is co-authored
+      by Sentinel AI co-founder Lichao Wu, together with Sasha
+      Behrouzi, Mohamadreza Rostami, Maximilian Thang, and Ahmad-Reza
+      Sadeghi (Technical University of Darmstadt), and Stjepan Picek
+      (University of Zagreb &amp; Radboud University).
+    </p>
+
+    <h2>What NeuroStrike does</h2>
+    <p>
+      Aligned LLMs refuse harmful or policy-violating requests because of
+      specific internal machinery, not because they "understand" the
+      request is wrong. NeuroStrike identifies the small set of neurons
+      responsible for triggering that refusal behavior, then suppresses
+      them.
+    </p>
+    <ul>
+      <li>Tested across 20+ models, both open and closed.</li>
+      <li>Removing fewer than 0.6% of a model's neurons breaks its safety alignment almost entirely.</li>
+      <li>76.9% average attack success rate in white-box settings (attacker has model access).</li>
+      <li>63.7% average attack success rate in black-box settings (attacker doesn't).</li>
+      <li>Safety neurons transfer across fine-tuned and distilled variants of a model, with attack success rates around 77-78% on those derivatives too.</li>
+    </ul>
+    <p>
+      That last point is the one worth sitting with. Patching a base
+      model's alignment doesn't reliably patch everything built on top of
+      it. A fine-tuned or distilled variant can inherit the same
+      structural weakness even after the original has been hardened.
+    </p>
+
+    <h2>Why this matters for Sentinel</h2>
+    <p>
+      This is exactly the class of weakness Sentinel Assurance is built to
+      surface: not a clever prompt that happens to slip past a filter, but
+      a structural gap in how alignment is implemented in the first place.
+      Prompt-level jailbreak testing won't catch this. Finding it requires
+      understanding what's happening inside the model, not just what comes
+      out of it.
+    </p>
+    <p>
+      That's the research foundation behind how we approach red-teaming
+      at Sentinel: attack the system, then attribute exactly why the
+      attack worked, down to the mechanism. It's the same discipline we
+      bring to evaluating AI agents before they're given real authority.
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>Want to talk to the research team?</h2>
+      <p>We're always happy to discuss the work behind Sentinel, or how it applies to your AI agents.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/en/contact/">Talk to us</a>
+    </div>
+  </div>
+</section>
