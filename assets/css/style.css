@@ -545,14 +545,13 @@ tbody td:first-child { font-weight: 700; color: var(--navy-800); white-space: no
   box-shadow: var(--shadow-sm);
 }
 .team-avatar {
-  width: 64px; height: 64px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--navy-800), var(--navy-600));
-  color: var(--orange-300);
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 800;
-  font-size: 1.2rem;
+  width: 88px; height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
   margin-bottom: 18px;
+  border: 3px solid var(--paper);
+  box-shadow: 0 0 0 1px var(--border), var(--shadow-sm);
 }
 .team-card h3 { font-size: 1.12rem; margin-bottom: 2px; color: var(--navy-900); }
 .team-role {
