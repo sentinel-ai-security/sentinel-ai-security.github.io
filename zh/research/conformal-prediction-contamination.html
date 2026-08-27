@@ -1,0 +1,61 @@
+---
+layout: default
+lang: zh
+nav: research
+permalink: /zh/research/conformal-prediction-contamination/
+title: "Split Conformal Prediction under Data Contamination"
+description: >-
+  我们的最佳论文，研究校准数据被污染时保形预测的表现。这篇文章介绍研究发现。
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <span class="hero-eyebrow">研究</span>
+    <h1 style="max-width: 34ch;">COPA 2024最佳论文：数据污染下的保形预测</h1>
+    <p class="hero-sub">
+      保形预测（Conformal Prediction）让模型能够以经过校准的方式表达"我不确定"。我们研究了当校准数据本身并不干净时，这个保证会发生什么。
+    </p>
+    <div class="post-meta">
+      <span>Sentinel AI团队</span>
+      <span>·</span>
+      <span>2024年</span>
+      <span>·</span>
+      <a href="https://proceedings.mlr.press/v230/clarkson24a.html" target="_blank" rel="noopener">在PMLR阅读论文 ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-body">
+    <a class="post-back" href="/zh/research/">← 返回研究</a>
+
+    <p>
+      我们的论文《Split Conformal Prediction under Data Contamination》获得了第13届Symposium on Conformal and Probabilistic Prediction with Applications（COPA 2024）的最佳论文奖。这项研究由Sentinel AI联合创始人Wenkai Xu，与Jason Clarkson、Mihai Cucuringu、牛津大学的Gesine Reinert共同完成。
+    </p>
+
+    <h2>这篇论文做了什么</h2>
+    <ul>
+      <li>拆分保形预测（Split Conformal Prediction）是一种广泛使用的、不依赖分布假设的方法，用于生成经过校准的预测集，其保证依赖于校准数据是干净的。</li>
+      <li>这篇论文精确量化了被污染的校准数据会如何削弱这一保证，包括覆盖率（真实值实际落在预测集内的频率）和效率（预测集有多紧）两个方面。</li>
+      <li>提出了Contamination Robust Conformal Prediction，一种面向分类任务的校正方法，即使部分校准数据被污染，也能恢复可靠的覆盖率保证。</li>
+      <li>在合成数据集与真实数据集上都进行了验证。</li>
+    </ul>
+
+    <h2>我们的看法</h2>
+    <p>
+      这正是值得关注的那类保证：不只是模型表现好不好，而是你能否信任它所报告的置信度，以及这种信任在什么条件下会失效。在实际生产环境中，校准数据很少像基准测试里那样干净，而精确知道这会让你付出多大代价，正是"真正经过校准的系统"与"看起来经过校准的系统"之间的区别。
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>想和研究团队聊聊？</h2>
+      <p>我们很乐意分享Sentinel背后的研究工作，或探讨它如何应用于你的AI Agent。</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/zh/contact/">联系我们</a>
+    </div>
+  </div>
+</section>

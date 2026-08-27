@@ -1,0 +1,61 @@
+---
+layout: default
+lang: zh
+nav: research
+permalink: /zh/research/linear-time-kernel-gof/
+title: "A Linear-Time Kernel Goodness-of-Fit Test"
+description: >-
+  我们发表于NeurIPS 2017的最佳论文，提出一种时间复杂度随样本量线性增长的拟合优度检验。这篇文章介绍研究发现。
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <span class="hero-eyebrow">研究</span>
+    <h1 style="max-width: 34ch;">NeurIPS 2017最佳论文：一种时间复杂度线性增长的拟合优度检验</h1>
+    <p class="hero-sub">
+      检验一个模型是否真正拟合你的数据，速度不应该比训练模型本身还慢。我们构建了一种检验方法，其时间复杂度始终随样本量线性增长，并能指出拟合失效的具体位置。
+    </p>
+    <div class="post-meta">
+      <span>Sentinel AI团队</span>
+      <span>·</span>
+      <span>2017年</span>
+      <span>·</span>
+      <a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/979d472a84804b9f647bc185a877a8b5-Paper.pdf" target="_blank" rel="noopener">在NeurIPS阅读论文 ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-body">
+    <a class="post-back" href="/zh/research/">← 返回研究</a>
+
+    <p>
+      我们的论文《A Linear-Time Kernel Goodness-of-Fit Test》获得了NeurIPS 2017（第30届神经信息处理系统大会）最佳论文奖。这项研究由Sentinel AI联合创始人Wenkai Xu，与伦敦大学学院Gatsby计算神经科学中心的Wittawat Jitkrittum、Arthur Gretton，以及统计数理研究所（日本）的Zoltan Szabo、Kenji Fukumizu共同完成。
+    </p>
+
+    <h2>这篇论文做了什么</h2>
+    <ul>
+      <li>提出了一种自适应拟合优度检验方法，其计算成本随样本量线性增长，而非早期核方法检验常见的二次方增长。</li>
+      <li>该方法会主动学习最能指示模型与数据出现偏差的具体检验特征，而不只是返回一个笼统的统计量。</li>
+      <li>基于Stein方法构建，因此无需计算模型的归一化常数，而这一常数在实践中往往难以计算。</li>
+      <li>在均值偏移的备择假设下，被证明具有比此前线性时间核检验更高的相对（Bahadur）效率，并在高维场景下达到甚至超过二次时间检验的检验效力。</li>
+    </ul>
+
+    <h2>我们的看法</h2>
+    <p>
+      一种无法扩展到真实系统所产生数据规模的检验方法，无论理论多么严谨，在实践中都难以真正被运行起来。在保持可解释性的同时把拟合优度检验的复杂度降到线性，正是这类不起眼却基础性的工作，它让严谨的验证真正可以被持续运行，而不只是偶尔做一次审计。
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>想和研究团队聊聊？</h2>
+      <p>我们很乐意分享Sentinel背后的研究工作，或探讨它如何应用于你的AI Agent。</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/zh/contact/">联系我们</a>
+    </div>
+  </div>
+</section>

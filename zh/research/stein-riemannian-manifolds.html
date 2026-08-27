@@ -1,0 +1,61 @@
+---
+layout: default
+lang: zh
+nav: research
+permalink: /zh/research/stein-riemannian-manifolds/
+title: "Interpretable Stein Goodness-of-fit Tests on Riemannian Manifold"
+description: >-
+  我们发表于ICML 2021的论文，研究弯曲几何空间上模型的拟合优度检验。这篇文章介绍研究发现。
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <span class="hero-eyebrow">研究</span>
+    <h1 style="max-width: 34ch;">检验模型能否拟合弯曲空间上的数据，发表于ICML 2021</h1>
+    <p class="hero-sub">
+      大量真实数据并不生活在平坦的欧氏空间中，比如角度、旋转、方向。我们构建了一种直接在这类几何结构上运行的拟合优度检验，它不仅能告诉你模型错了，还能告诉你错在哪里。
+    </p>
+    <div class="post-meta">
+      <span>Sentinel AI团队</span>
+      <span>·</span>
+      <span>2021年</span>
+      <span>·</span>
+      <a href="https://proceedings.mlr.press/v139/xu21c/xu21c.pdf" target="_blank" rel="noopener">在PMLR阅读论文 ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-body">
+    <a class="post-back" href="/zh/research/">← 返回研究</a>
+
+    <p>
+      我们的论文《Interpretable Stein Goodness-of-fit Tests on Riemannian Manifold》发表于ICML 2021（第38届国际机器学习大会）。这项研究由Sentinel AI联合创始人Wenkai Xu，与东京大学暨RIKEN脑科学中心的Takeru Matsuda共同完成。
+    </p>
+
+    <h2>这篇论文做了什么</h2>
+    <ul>
+      <li>将核Stein差异（Kernel Stein Discrepancy）理论扩展到黎曼流形（例如环面、旋转群）上定义的分布，用于构建拟合优度检验，而不再假设数据处于平坦的欧氏空间。</li>
+      <li>即使参考模型的归一化常数未知或难以计算，这一方法依然适用，而这正是这类空间上现实模型的常见情况。</li>
+      <li>给出的不只是一个通过/未通过的统计量，而是一种可解释的诊断结果：能够指出模型的拟合究竟在哪里、以何种方式出现问题。</li>
+      <li>配有渐近效率分析支撑，并在仿真与真实数据集上完成了验证。</li>
+    </ul>
+
+    <h2>我们的看法</h2>
+    <p>
+      一个模型的可信程度，取决于你能对它运行怎样的检验，而大多数标准检验工具都在悄悄假设数据处于平坦空间中。现实世界中的大量数据并非如此。构建能够适配数据真实几何结构、并且能解释自身判断（而不只是给出一个数字）的检验方法，正是我们认为在验证更复杂系统时同样值得坚持的原则：不只是说出问题所在，还要指明问题出在哪里。
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>想和研究团队聊聊？</h2>
+      <p>我们很乐意分享Sentinel背后的研究工作，或探讨它如何应用于你的AI Agent。</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/zh/contact/">联系我们</a>
+    </div>
+  </div>
+</section>

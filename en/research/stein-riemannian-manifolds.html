@@ -1,0 +1,75 @@
+---
+layout: default
+lang: en
+nav: research
+permalink: /en/research/stein-riemannian-manifolds/
+title: "Interpretable Stein Goodness-of-fit Tests on Riemannian Manifold"
+description: >-
+  Our ICML 2021 paper on goodness-of-fit testing for models on curved
+  geometric spaces. Here's what it found.
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <span class="hero-eyebrow">Research</span>
+    <h1 style="max-width: 32ch;">Testing whether a model fits data on curved spaces, published at ICML 2021</h1>
+    <p class="hero-sub">
+      Plenty of real data doesn't live in flat Euclidean space: angles,
+      rotations, directions. We built a goodness-of-fit test that works
+      natively on that geometry, and that shows where a model is wrong,
+      not just that it is.
+    </p>
+    <div class="post-meta">
+      <span>By the Sentinel AI team</span>
+      <span>·</span>
+      <span>2021</span>
+      <span>·</span>
+      <a href="https://proceedings.mlr.press/v139/xu21c/xu21c.pdf" target="_blank" rel="noopener">Read the paper on PMLR ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-body">
+    <a class="post-back" href="/en/research/">← Back to Research</a>
+
+    <p>
+      Our paper, <strong>"Interpretable Stein Goodness-of-fit Tests on
+      Riemannian Manifold,"</strong> was published at ICML 2021 (the 38th
+      International Conference on Machine Learning). It's co-authored by
+      Sentinel AI co-founder Wenkai Xu, together with Takeru Matsuda
+      (University of Tokyo &amp; RIKEN Center for Brain Science).
+    </p>
+
+    <h2>What the paper does</h2>
+    <ul>
+      <li>Extends kernel Stein discrepancy theory to build goodness-of-fit tests for distributions defined on Riemannian manifolds, such as tori and rotation groups, instead of assuming flat Euclidean data.</li>
+      <li>Works even when the reference model's normalizing constant is unknown or intractable to compute, the common case for realistic models on these spaces.</li>
+      <li>Produces an interpretable diagnostic rather than a bare pass/fail statistic: it can point to where and how a model's fit breaks down.</li>
+      <li>Backed by asymptotic efficiency analysis and validated on simulations and real datasets.</li>
+    </ul>
+
+    <h2>Our take</h2>
+    <p>
+      A model is only as trustworthy as the tests you can run against it,
+      and most standard testing tools quietly assume the data lives in
+      flat space. A lot of real-world data doesn't. Building tests that
+      work on the actual geometry of the data, and that explain their
+      verdict instead of just returning a number, is the same discipline
+      worth bringing to verifying more complex systems: don't just say
+      something's wrong, show where.
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>Want to talk to the research team?</h2>
+      <p>We're always happy to discuss the work behind Sentinel, or how it applies to your AI agents.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/en/contact/">Talk to us</a>
+    </div>
+  </div>
+</section>

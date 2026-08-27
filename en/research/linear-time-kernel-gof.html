@@ -1,0 +1,75 @@
+---
+layout: default
+lang: en
+nav: research
+permalink: /en/research/linear-time-kernel-gof/
+title: "A Linear-Time Kernel Goodness-of-Fit Test"
+description: >-
+  Our NeurIPS 2017 best paper on a goodness-of-fit test that scales
+  linearly with sample size. Here's what it found.
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <span class="hero-eyebrow">Research</span>
+    <h1 style="max-width: 32ch;">Best paper at NeurIPS 2017: a goodness-of-fit test that scales linearly</h1>
+    <p class="hero-sub">
+      Checking whether a model actually fits your data shouldn't get
+      slower than training the model itself. We built a test that stays
+      linear in sample size and shows where the fit breaks down.
+    </p>
+    <div class="post-meta">
+      <span>By the Sentinel AI team</span>
+      <span>·</span>
+      <span>2017</span>
+      <span>·</span>
+      <a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/979d472a84804b9f647bc185a877a8b5-Paper.pdf" target="_blank" rel="noopener">Read the paper on NeurIPS ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-body">
+    <a class="post-back" href="/en/research/">← Back to Research</a>
+
+    <p>
+      Our paper, <strong>"A Linear-Time Kernel Goodness-of-Fit
+      Test,"</strong> received the Best Paper Award at NeurIPS 2017
+      (Advances in Neural Information Processing Systems 30). The work is
+      co-authored by Sentinel AI co-founder Wenkai Xu, together with
+      Wittawat Jitkrittum and Arthur Gretton (Gatsby Computational
+      Neuroscience Unit, University College London), and Zoltan Szabo and
+      Kenji Fukumizu (Institute of Statistical Mathematics).
+    </p>
+
+    <h2>What the paper does</h2>
+    <ul>
+      <li>Introduces an adaptive goodness-of-fit test whose computational cost scales linearly with the number of samples, instead of the quadratic cost typical of earlier kernel-based tests.</li>
+      <li>Learns the specific test features that best indicate where a model diverges from the data, rather than returning a single undifferentiated statistic.</li>
+      <li>Built with Stein's method, so it never needs to compute the model's normalizing constant, which is often intractable in practice.</li>
+      <li>Proven to have greater relative (Bahadur) efficiency than prior linear-time kernel tests under mean-shift alternatives, and matches or exceeds the power of quadratic-time tests in high-dimensional settings.</li>
+    </ul>
+
+    <h2>Our take</h2>
+    <p>
+      A test that can't scale to the amount of data a real system
+      produces doesn't get run in practice, however sound the theory is.
+      Getting goodness-of-fit testing down to linear time while keeping
+      it interpretable is exactly the kind of unglamorous, foundational
+      work that makes rigorous verification something you can run
+      continuously, not just as an occasional audit.
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>Want to talk to the research team?</h2>
+      <p>We're always happy to discuss the work behind Sentinel, or how it applies to your AI agents.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/en/contact/">Talk to us</a>
+    </div>
+  </div>
+</section>

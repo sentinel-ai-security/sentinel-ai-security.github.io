@@ -1,0 +1,72 @@
+---
+layout: default
+lang: en
+nav: research
+permalink: /en/research/kernel-stein-generative-models/
+title: "A Kernelised Stein Statistic for Assessing Implicit Generative Models"
+description: >-
+  Our NeurIPS 2022 paper on testing generative models that only give you
+  samples, not probabilities. Here's what it found.
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <span class="hero-eyebrow">Research</span>
+    <h1 style="max-width: 32ch;">Testing generative models that don't give you a probability, published at NeurIPS 2022</h1>
+    <p class="hero-sub">
+      Most generative models today, GANs and simulators included, don't
+      tell you the probability of anything, they just generate samples.
+      We built a statistical test that checks their quality anyway.
+    </p>
+    <div class="post-meta">
+      <span>By the Sentinel AI team</span>
+      <span>·</span>
+      <span>2022</span>
+      <span>·</span>
+      <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/2fb462e23667ad5e6471a4e9af8e4774-Paper-Conference.pdf" target="_blank" rel="noopener">Read the paper on NeurIPS ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-body">
+    <a class="post-back" href="/en/research/">← Back to Research</a>
+
+    <p>
+      Our paper, <strong>"A Kernelised Stein Statistic for Assessing
+      Implicit Generative Models,"</strong> was published at NeurIPS 2022
+      (the Thirty-Sixth Conference on Neural Information Processing
+      Systems). It's co-authored by Sentinel AI co-founder Wenkai Xu,
+      together with Gesine D. Reinert (University of Oxford).
+    </p>
+
+    <h2>What the paper does</h2>
+    <ul>
+      <li>Introduces a Kernelised Stein Discrepancy-type test, built on a non-parametric Stein operator, designed specifically for implicit generative models: ones you can sample from but that have no tractable density.</li>
+      <li>Works with a flexible number of samples drawn from the generator while holding the observed dataset fixed, which matters for models that are cheap to sample from but expensive to compare against real data.</li>
+      <li>Shows improved performance over existing quality-assessment methods, on both synthetic distributions and trained generative models.</li>
+    </ul>
+
+    <h2>Our take</h2>
+    <p>
+      Generative models are increasingly components that other systems,
+      agents included, build on and trust implicitly. If you can't write
+      down what a model's output distribution actually is, you still need
+      a rigorous way to check whether it's behaving the way you think it
+      is. That's the same standard worth holding any component to before
+      it gets to sit upstream of a decision an agent makes.
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>Want to talk to the research team?</h2>
+      <p>We're always happy to discuss the work behind Sentinel, or how it applies to your AI agents.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/en/contact/">Talk to us</a>
+    </div>
+  </div>
+</section>

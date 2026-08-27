@@ -1,0 +1,75 @@
+---
+layout: default
+lang: en
+nav: research
+permalink: /en/research/conformal-prediction-contamination/
+title: "Split Conformal Prediction under Data Contamination"
+description: >-
+  Our best paper award-winning work on conformal prediction under
+  contaminated calibration data. Here's what it found.
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <span class="hero-eyebrow">Research</span>
+    <h1 style="max-width: 32ch;">Best paper at COPA 2024: conformal prediction under data contamination</h1>
+    <p class="hero-sub">
+      Conformal prediction gives models a calibrated way to say "I'm not
+      sure." We asked what happens to that guarantee when the calibration
+      data itself isn't clean.
+    </p>
+    <div class="post-meta">
+      <span>By the Sentinel AI team</span>
+      <span>·</span>
+      <span>2024</span>
+      <span>·</span>
+      <a href="https://proceedings.mlr.press/v230/clarkson24a.html" target="_blank" rel="noopener">Read the paper on PMLR ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-body">
+    <a class="post-back" href="/en/research/">← Back to Research</a>
+
+    <p>
+      Our paper, <strong>"Split Conformal Prediction under Data
+      Contamination,"</strong> received the Best Paper Award at the 13th
+      Symposium on Conformal and Probabilistic Prediction with
+      Applications (COPA 2024). The work is co-authored by Sentinel AI
+      co-founder Wenkai Xu, together with Jason Clarkson, Mihai
+      Cucuringu, and Gesine Reinert (University of Oxford).
+    </p>
+
+    <h2>What the paper does</h2>
+    <ul>
+      <li>Split conformal prediction is a widely used, distribution-free method for producing calibrated prediction sets, and its guarantees rely on the calibration data being clean.</li>
+      <li>The paper quantifies exactly how contaminated calibration data degrades that guarantee, in both coverage (how often the truth actually lands in the predicted set) and efficiency (how tight the set is).</li>
+      <li>Introduces Contamination Robust Conformal Prediction, an adjustment for classification tasks that restores reliable coverage even when a fraction of the calibration data is contaminated.</li>
+      <li>Validated on both synthetic and real-world datasets.</li>
+    </ul>
+
+    <h2>Our take</h2>
+    <p>
+      This is directly the kind of guarantee worth caring about: not just
+      whether a model performs well, but whether you can trust the
+      confidence it reports, and under what conditions that trust breaks
+      down. Calibration data is rarely as clean in production as it is in
+      a benchmark, and knowing precisely how much that costs you is the
+      difference between a system that's calibrated and one that just
+      looks calibrated.
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>Want to talk to the research team?</h2>
+      <p>We're always happy to discuss the work behind Sentinel, or how it applies to your AI agents.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/en/contact/">Talk to us</a>
+    </div>
+  </div>
+</section>
