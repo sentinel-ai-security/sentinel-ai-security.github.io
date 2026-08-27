@@ -16,7 +16,7 @@
   {% if page.lang == 'zh' %}
     {% assign home_url = '/zh/' %}
     {% assign product_url = '/zh/product/' %}
-    {% assign aal_url = '/zh/aal/' %}
+    {% comment %} {% assign aal_url = '/zh/aal/' %} -- AAL page hidden pending IP protection, see _backup_aal/README.md {% endcomment %}
     {% assign use_cases_url = '/zh/use-cases/' %}
     {% assign team_url = '/zh/team/' %}
     {% assign company_url = '/zh/company/' %}
@@ -24,7 +24,7 @@
   {% else %}
     {% assign home_url = '/en/' %}
     {% assign product_url = '/en/product/' %}
-    {% assign aal_url = '/en/aal/' %}
+    {% comment %} {% assign aal_url = '/en/aal/' %} -- AAL page hidden pending IP protection, see _backup_aal/README.md {% endcomment %}
     {% assign use_cases_url = '/en/use-cases/' %}
     {% assign team_url = '/en/team/' %}
     {% assign company_url = '/en/company/' %}
@@ -53,7 +53,7 @@
       <nav class="main-nav" aria-label="Primary">
         <a href="{{ home_url }}" {% if page.nav == 'home' %}aria-current="page"{% endif %}>{{ t.nav.home }}</a>
         <a href="{{ product_url }}" {% if page.nav == 'product' %}aria-current="page"{% endif %}>{{ t.nav.product }}</a>
-        <a href="{{ aal_url }}" {% if page.nav == 'aal' %}aria-current="page"{% endif %}>{{ t.nav.aal }}</a>
+        <!-- <a href="{{ aal_url }}" {% if page.nav == 'aal' %}aria-current="page"{% endif %}>{{ t.nav.aal }}</a> -->
         <a href="{{ use_cases_url }}" {% if page.nav == 'use_cases' %}aria-current="page"{% endif %}>{{ t.nav.use_cases }}</a>
         <a href="{{ team_url }}" {% if page.nav == 'team' %}aria-current="page"{% endif %}>{{ t.nav.team }}</a>
         <a href="{{ company_url }}" {% if page.nav == 'company' %}aria-current="page"{% endif %}>{{ t.nav.company }}</a>
@@ -72,7 +72,7 @@
     <div class="mobile-nav" id="mobileNav">
       <a href="{{ home_url }}">{{ t.nav.home }}</a>
       <a href="{{ product_url }}">{{ t.nav.product }}</a>
-      <a href="{{ aal_url }}">{{ t.nav.aal }}</a>
+      <!-- <a href="{{ aal_url }}">{{ t.nav.aal }}</a> -->
       <a href="{{ use_cases_url }}">{{ t.nav.use_cases }}</a>
       <a href="{{ team_url }}">{{ t.nav.team }}</a>
       <a href="{{ company_url }}">{{ t.nav.company }}</a>
@@ -94,14 +94,14 @@
         </div>
         <nav class="footer-nav" aria-label="Footer">
           <a href="{{ product_url }}">{{ t.nav.product }}</a>
-          <a href="{{ aal_url }}">{{ t.nav.aal }}</a>
+          <!-- <a href="{{ aal_url }}">{{ t.nav.aal }}</a> -->
           <a href="{{ use_cases_url }}">{{ t.nav.use_cases }}</a>
           <a href="{{ team_url }}">{{ t.nav.team }}</a>
           <a href="{{ company_url }}">{{ t.nav.company }}</a>
           <a href="{{ contact_url }}">{{ t.nav.contact }}</a>
         </nav>
       </div>
-      <p class="footer-note">{{ t.footer_note }}</p>
+      <!-- <p class="footer-note">{{ t.footer_note }}</p> -- AAL-specific disclaimer, hidden along with the AAL page -->
       <p class="footer-rights">{{ t.footer_rights }}</p>
     </div>
   </footer>
