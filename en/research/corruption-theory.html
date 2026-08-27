@@ -1,0 +1,92 @@
+---
+layout: default
+lang: en
+nav: research
+permalink: /en/research/corruption-theory/
+title: "Corruptions of Supervised Learning Problems: Typology and Mitigations"
+description: >-
+  Our paper building a general theory of data corruption in supervised
+  learning was published in the Journal of Machine Learning Research.
+  Here's what it found.
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <span class="hero-eyebrow">Research</span>
+    <h1 style="max-width: 32ch;">A general theory of data corruption, published in JMLR</h1>
+    <p class="hero-sub">
+      Most machine learning theory assumes clean data. We built a
+      framework that classifies every way a supervised learning problem
+      can be corrupted, and shows how to correct for it.
+    </p>
+    <div class="post-meta">
+      <span>By the Sentinel AI team</span>
+      <span>·</span>
+      <span>2026</span>
+      <span>·</span>
+      <a href="https://www.jmlr.org/papers/volume27/24-0808/24-0808.pdf" target="_blank" rel="noopener">Read the paper on JMLR ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-body">
+    <a class="post-back" href="/en/research/">← Back to Research</a>
+
+    <p>
+      Our paper, <strong>"Corruptions of Supervised Learning Problems:
+      Typology and Mitigations,"</strong> has been published in the
+      Journal of Machine Learning Research (JMLR), one of the most
+      selective venues in machine learning. The work is co-authored by
+      Sentinel AI co-founder Nan Lu, together with Laura Iacovissi and
+      Robert C. Williamson (University of Tübingen).
+    </p>
+
+    <h2>What the paper does</h2>
+    <p>
+      Almost all supervised learning theory assumes the training data is
+      clean. In practice it rarely is: labels get mislabeled, features get
+      corrupted or dropped, and the two can be corrupted together in ways
+      that depend on each other. Prior work covered pieces of this
+      picture, but no unified account of what "corruption" even means
+      existed.
+    </p>
+    <ul>
+      <li>A single, general theory of corruption, modeled as a Markov kernel acting on the data distribution, that covers label corruption, attribute corruption, and dependent combinations of the two.</li>
+      <li>A provably exhaustive classification of corruption types, unifying models that were previously studied in isolation.</li>
+      <li>A systematic analysis of how each corruption type distorts a learning problem's Bayes risk, the theoretical floor on how well any model can do.</li>
+      <li>Mitigation methods that extend classical loss-correction techniques, built for simple label noise, to the harder dependent and joint corruption cases.</li>
+    </ul>
+    <p>
+      The label-only assumption is the one worth sitting with. Most
+      correction techniques in the literature only patch the loss
+      function, which works when corruption hits labels alone. Once
+      corruption touches the input features too, the fix has to reach
+      into the hypothesis class itself, not just the loss.
+    </p>
+
+    <h2>Our take</h2>
+    <p>
+      Every guarantee a machine learning system offers rests on an
+      assumption about the data it was built on. That assumption quietly
+      breaks more often than most teams check for, and it breaks in ways
+      that a clean validation set won't surface. That's exactly the kind
+      of gap we think matters for anyone deciding how much to trust a
+      model, and it's the sort of foundational question we care about
+      answering rigorously before the ML systems built on top get more
+      autonomy over real decisions.
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>Want to talk to the research team?</h2>
+      <p>We're always happy to discuss the work behind Sentinel, or how it applies to your AI agents.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/en/contact/">Talk to us</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,67 @@
+---
+layout: default
+lang: zh
+nav: research
+permalink: /zh/research/corruption-theory/
+title: "监督学习问题的数据污染：类型学与应对方法"
+description: >-
+  我们关于监督学习中数据污染通用理论的论文发表于Journal of Machine Learning Research（JMLR）。这篇文章介绍研究发现。
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <span class="hero-eyebrow">研究</span>
+    <h1 style="max-width: 34ch;">一套关于数据污染的通用理论，发表于JMLR</h1>
+    <p class="hero-sub">
+      大多数机器学习理论都假设训练数据是干净的。我们构建了一套框架，对监督学习问题可能被污染的每一种方式进行分类，并给出相应的应对方法。
+    </p>
+    <div class="post-meta">
+      <span>Sentinel AI团队</span>
+      <span>·</span>
+      <span>2026年</span>
+      <span>·</span>
+      <a href="https://www.jmlr.org/papers/volume27/24-0808/24-0808.pdf" target="_blank" rel="noopener">在JMLR阅读论文 ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-body">
+    <a class="post-back" href="/zh/research/">← 返回研究</a>
+
+    <p>
+      我们的论文《Corruptions of Supervised Learning Problems: Typology and Mitigations》已发表于Journal of Machine Learning Research（JMLR），这是机器学习领域筛选最严格的期刊之一。这项研究由Sentinel AI联合创始人Nan Lu，与图宾根大学的Laura Iacovissi、Robert C. Williamson共同完成。
+    </p>
+
+    <h2>这篇论文做了什么</h2>
+    <p>
+      几乎所有监督学习理论都假设训练数据是干净的。但现实中很少如此：标签会被错误标注，特征会被污染或缺失，二者还可能以相互依赖的方式同时被污染。此前的研究只覆盖了这幅图景的一部分，尚不存在对"污染"本身的统一定义。
+    </p>
+    <ul>
+      <li>提出了一套单一的、通用的污染理论，将污染建模为作用于数据分布的马尔可夫核，涵盖标签污染、特征污染，以及二者相互依赖的组合污染。</li>
+      <li>给出了一套可证明穷尽的污染类型分类体系，统一了此前被分别研究的多种模型。</li>
+      <li>系统分析了每种污染类型如何扭曲学习问题的贝叶斯风险，也就是任何模型表现的理论下限。</li>
+      <li>提出的应对方法，将原本只针对简单标签噪声设计的经典损失校正技术，扩展到了更困难的依赖型与联合型污染场景。</li>
+    </ul>
+    <p>
+      "仅限标签"这一假设最值得关注。现有文献中的大多数校正方法只修正损失函数，这在污染只发生在标签上时是有效的。但一旦污染同时触及输入特征，修正就必须深入到假设类本身，而不能只停留在损失函数层面。
+    </p>
+
+    <h2>我们的看法</h2>
+    <p>
+      一个机器学习系统所给出的每一项保证，都建立在关于其训练数据的某种假设之上。这个假设被打破的频率，远比大多数团队所核查的更高，而且它被打破的方式，往往不会在一个干净的验证集上显现出来。这正是我们认为，在决定该给予一个模型多少信任时值得关注的那类缺口，也是我们希望在建立于这些机器学习系统之上的Agent获得更多自主权之前，率先严谨回答的一类基础问题。
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>想和研究团队聊聊？</h2>
+      <p>我们很乐意分享Sentinel背后的研究工作，或探讨它如何应用于你的AI Agent。</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/zh/contact/">联系我们</a>
+    </div>
+  </div>
+</section>
