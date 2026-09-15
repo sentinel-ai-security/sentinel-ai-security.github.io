@@ -422,45 +422,6 @@ button { font-family: inherit; }
   .stage-grid > .stage-card:not(:last-child) .stage-arrow { display: block; }
 }
 
-/* Callout / quote block (mirrors whitepaper's orange-bar highlight box) */
-.callout {
-  border-left: 4px solid var(--orange-500);
-  background: var(--orange-100);
-  padding: 22px 26px;
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  font-weight: 600;
-  color: var(--navy-900);
-  font-size: 1.02rem;
-}
-.callout.on-dark {
-  background: rgba(247,148,29,0.10);
-  color: var(--paper);
-  border-left-color: var(--orange-400);
-}
-
-/* Flywheel strip */
-.flywheel {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-  font-weight: 600;
-  font-size: 0.98rem;
-  color: var(--navy-900);
-}
-.section-dark .flywheel { color: var(--paper); }
-.flywheel .fw-step {
-  background: var(--paper);
-  border: 1px solid var(--border);
-  padding: 10px 16px;
-  border-radius: 999px;
-}
-.section-dark .flywheel .fw-step {
-  background: rgba(255,255,255,0.06);
-  border-color: var(--border-dark);
-}
-.flywheel .fw-arrow { color: var(--orange-500); font-weight: 800; }
-
 /* ============================================================
    Tables
    ============================================================ */
