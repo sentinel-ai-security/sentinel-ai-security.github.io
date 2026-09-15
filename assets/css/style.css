@@ -336,36 +336,6 @@ button { font-family: inherit; }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
 }
 
-/* Horizontally scrollable card row on mobile (mirrors .table-shell/.table-wrap) */
-.cards-shell { position: relative; }
-.cards-shell::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 28px;
-  background: linear-gradient(to right, transparent, rgba(10, 24, 48, 0.10));
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.15s ease;
-}
-@media (max-width: 900px) {
-  .cards-shell.has-more-right::after { opacity: 1; }
-  .cards-wrap {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 4px;
-  }
-  .cards-wrap .card {
-    flex: 0 0 82%;
-    scroll-snap-align: start;
-  }
-}
-
 .card {
   background: var(--paper);
   border: 1px solid var(--border);
@@ -763,4 +733,38 @@ tbody td:first-child { font-weight: 700; color: var(--navy-800); white-space: no
   color: var(--navy-800);
 }
 .divider { height: 1px; background: var(--border); border: none; margin: 48px 0; }
+
+/* ============================================================
+   Horizontally scrollable card row on mobile
+   (mirrors .table-shell/.table-wrap; placed last so it wins the
+   cascade over any earlier grid/card component's own display rule)
+   ============================================================ */
+.cards-shell { position: relative; }
+.cards-shell::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 28px;
+  background: linear-gradient(to right, transparent, rgba(10, 24, 48, 0.10));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+@media (max-width: 900px) {
+  .cards-shell.has-more-right::after { opacity: 1; }
+  .cards-wrap {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 4px;
+  }
+  .cards-wrap > * {
+    flex: 0 0 82%;
+    scroll-snap-align: start;
+  }
+}
 
