@@ -357,7 +357,7 @@ button { font-family: inherit; }
   margin-bottom: 18px;
 }
 
-/* Stage / loop cards (Verify -> Guard -> Live) */
+/* Stage / loop cards (Verify -> Live -> Guard) */
 .stage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; }
 @media (max-width: 900px) { .stage-grid { grid-template-columns: 1fr; } }
 .stage-card {

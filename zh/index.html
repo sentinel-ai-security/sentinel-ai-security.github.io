@@ -38,14 +38,14 @@ description: >-
       <div class="flow-step">
         <span class="flow-badge">2</span>
         <div>
-          <h4>Sentinel Guard</h4>
+          <h4>Sentinel Live</h4>
           <p>Agent与真实业务系统间的安全网关，回答"这一步能不能执行"。</p>
         </div>
       </div>
       <div class="flow-step">
         <span class="flow-badge">3</span>
         <div>
-          <h4>Sentinel Live</h4>
+          <h4>Sentinel Guard</h4>
           <p>模型、工具或权限变更时自动触发复测，回答"现在依然安全吗"。</p>
         </div>
       </div>
@@ -109,7 +109,7 @@ description: >-
       <div class="stage-card">
         <span class="stage-num">2</span>
         <span class="stage-question">这一步能不能执行？</span>
-        <h3>Sentinel Guard</h3>
+        <h3>Sentinel Live</h3>
         <p>作为Agent与真实业务系统间的安全网关，在关键动作执行前进行毫秒级拦截。</p>
         <ul>
           <li>输入检查、意图理解与工具调用验证</li>
@@ -121,12 +121,12 @@ description: >-
       <div class="stage-card">
         <span class="stage-num">3</span>
         <span class="stage-question">现在依然安全吗？</span>
-        <h3>Sentinel Live</h3>
+        <h3>Sentinel Guard</h3>
         <p>模型、工具或权限变更时自动触发影响评估与复测。</p>
         <ul>
           <li>模型 / Prompt / RAG / 工具 / 权限变化检测</li>
           <li>自动生成测试用例执行复测</li>
-          <li>更新安全评级，并反哺Guard策略</li>
+          <li>更新安全评级，并反哺Live策略</li>
         </ul>
       </div>
     </div>
