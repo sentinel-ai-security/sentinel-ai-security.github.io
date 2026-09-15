@@ -20,7 +20,7 @@ Every page's front matter sets `lang`, `nav` (for header highlighting) and
 
 ## Before going live
 
-- Contact forms and mailto links point to `sentinelai268@gmail.com`
+- Contact forms and mailto links point to `info@sentinel-assurance.com`
   (set in `en/contact.html` and `zh/contact.html`) — update there if the
   inbox changes.
 - Confirm `url` in `_config.yml` matches the actual GitHub Pages domain.
