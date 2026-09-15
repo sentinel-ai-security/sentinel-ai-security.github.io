@@ -12,9 +12,9 @@ en:
   lang_switch_label: 中文
   lang_switch_href: /zh/
   footer_tagline: "Before AI acts, Sentinel verifies."
-  footer_rights: "© 2026 Sentinel AI. All rights reserved."
+  footer_rights: "© 2026 Sentinel Assurance. All rights reserved."
   footer_note: >-
-    AAL is Sentinel AI's own rating framework, not an official regulatory
+    AAL is Sentinel Assurance's own rating framework, not an official regulatory
     certification.
   consent_message: "We use Google Analytics to understand how visitors use this site. No data is collected until you accept."
   consent_accept: Accept
@@ -33,9 +33,9 @@ zh:
   lang_switch_label: English
   lang_switch_href: /en/
   footer_tagline: "在AI行动之前，先问Sentinel。"
-  footer_rights: "© 2026 Sentinel AI 未然科技。保留所有权利。"
+  footer_rights: "© 2026 Sentinel Assurance 未然科技。保留所有权利。"
   footer_note: >-
-    AAL是Sentinel AI自有的评级体系，并非官方监管认证。
+    AAL是Sentinel Assurance自有的评级体系，并非官方监管认证。
   consent_message: "我们使用Google Analytics了解访客如何使用本网站。在您同意之前，不会收集任何数据。"
   consent_accept: 接受
   consent_decline: 拒绝

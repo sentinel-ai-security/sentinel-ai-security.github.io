@@ -1,6 +1,6 @@
 # sentinel-ai-security.github.io
 
-Marketing site for Sentinel AI, built as a bilingual (EN/ZH) Jekyll site for
+Marketing site for Sentinel Assurance, built as a bilingual (EN/ZH) Jekyll site for
 GitHub Pages.
 
 ## Structure
