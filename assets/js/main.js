@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  var tableWraps = document.querySelectorAll('.table-wrap');
-  tableWraps.forEach(function (wrap) {
-    var shell = wrap.closest('.table-shell') || wrap;
+  var scrollWraps = document.querySelectorAll('.table-wrap, .cards-wrap');
+  scrollWraps.forEach(function (wrap) {
+    var shell = wrap.closest('.table-shell, .cards-shell') || wrap;
     function updateFade() {
       var hasMore = wrap.scrollLeft + wrap.clientWidth < wrap.scrollWidth - 1;
       shell.classList.toggle('has-more-right', hasMore);
