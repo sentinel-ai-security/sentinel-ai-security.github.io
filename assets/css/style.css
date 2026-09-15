@@ -136,7 +136,7 @@ button { font-family: inherit; }
 .header-inner {
   display: flex;
   align-items: center;
-  height: var(--header-h);
+  min-height: var(--header-h);
   gap: 28px;
 }
 .brand {
@@ -153,7 +153,6 @@ button { font-family: inherit; }
   font-weight: 800;
   letter-spacing: 0.01em;
   color: var(--paper);
-  white-space: nowrap;
 }
 .brand-name-accent { color: var(--orange-400); }
 
@@ -216,16 +215,7 @@ button { font-family: inherit; }
   .nav-toggle { display: flex; }
 }
 @media (max-width: 480px) {
-  .header-inner { gap: 10px; }
-  .brand { gap: 6px; }
-  .brand-name { font-size: 0.8rem; }
-  .brand-mark img { height: 22px; }
-  .nav-toggle { width: 32px; height: 32px; }
-}
-@media (max-width: 380px) {
-  .wrap { padding: 0 14px; }
-  .brand-name { font-size: 0.7rem; }
-  .brand-mark img { height: 19px; }
+  .brand-name { font-size: 1.05rem; line-height: 1.15; }
 }
 
 /* ============================================================
