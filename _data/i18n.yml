@@ -12,9 +12,9 @@ en:
   lang_switch_label: 中文
   lang_switch_href: /zh/
   footer_tagline: "Before AI acts, Sentinel verifies."
-  footer_rights: "© 2026 Sentinel Assurance. All rights reserved."
+  footer_rights: "© 2026 Sentinel Intelligence. All rights reserved."
   footer_note: >-
-    AAL is Sentinel Assurance's own rating framework, not an official regulatory
+    AAL is Sentinel Intelligence's own rating framework, not an official regulatory
     certification.
 zh:
   nav:
@@ -30,6 +30,6 @@ zh:
   lang_switch_label: English
   lang_switch_href: /en/
   footer_tagline: "在AI行动之前，先问Sentinel。"
-  footer_rights: "© 2026 Sentinel Assurance 未然科技。保留所有权利。"
+  footer_rights: "© 2026 Sentinel Intelligence 未然科技。保留所有权利。"
   footer_note: >-
-    AAL是Sentinel Assurance自有的评级体系，并非官方监管认证。
+    AAL是Sentinel Intelligence自有的评级体系，并非官方监管认证。
