@@ -11,7 +11,8 @@ cf_analytics_token: ""
 # Build settings
 markdown: kramdown
 permalink: pretty
-plugins: []
+plugins:
+  - jekyll-redirect-from
 
 exclude:
   - README.md

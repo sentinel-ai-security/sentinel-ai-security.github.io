@@ -1,0 +1,89 @@
+---
+layout: default
+lang: en
+nav: research
+permalink: /en/news/fuzzilicon/
+title: "Fuzzilicon: A Post-Silicon Microcode-Guided x86 CPU Fuzzer"
+description: >-
+  Our paper on fuzzing real x86 CPUs through their microcode won a
+  Distinguished Paper Award at NDSS Symposium 2026. Here's what Fuzzilicon
+  found.
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <h1 style="max-width: 30ch;">Distinguished Paper at NDSS 2026: Fuzzilicon finds hidden flaws inside real x86 CPUs</h1>
+    <p class="hero-sub">
+      CPU bugs are usually hunted in simulation, before the chip is made.
+      Fuzzilicon tests the finished chip itself, by instrumenting its
+      microcode, and found vulnerabilities that had never been reported.
+    </p>
+    <div class="post-meta">
+      <span>By the Sentinel Intelligence team</span>
+      <span>·</span>
+      <span>February 2026</span>
+      <span>·</span>
+      <a href="https://www.ndss-symposium.org/ndss-paper/fuzzilicon-a-post-silicon-microcode-guided-x86-cpu-fuzzer/" target="_blank" rel="noopener">Read the paper on NDSS ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-body">
+    <a class="post-back" href="/en/news/">← Back to News</a>
+
+    <p>
+      Our paper, <strong>"Fuzzilicon: A Post-Silicon Microcode-Guided x86
+      CPU Fuzzer,"</strong> received a Distinguished Paper Award at NDSS
+      Symposium 2026, one of the top venues in network and systems
+      security. The work is co-authored by Sentinel Intelligence co-founder
+      Lichao Wu, together with Johannes Lenzen, Mohamadreza Rostami, and
+      Ahmad-Reza Sadeghi (Technical University of Darmstadt).
+    </p>
+
+    <h2>What Fuzzilicon does</h2>
+    <p>
+      Fuzzing feeds a system huge numbers of generated inputs and watches
+      for unexpected behavior. For CPUs, that has mostly meant fuzzing a
+      design in simulation, which needs access to the chip's source design
+      and can miss what happens on real silicon. Fuzzilicon is the first
+      post-silicon fuzzing framework for real-world x86 CPUs. It uses
+      reverse-engineered access to Intel's microcode update interface to
+      instrument the microcode, getting feedback from inside the processor
+      while it runs.
+    </p>
+    <ul>
+      <li>Works on the finished chip, with no access to its design files and no vendor support.</li>
+      <li>Applied to Intel's Goldmont microarchitecture, it reported five findings, including two previously unknown microcode-level speculative-execution vulnerabilities.</li>
+      <li>It automatically rediscovered the µSpectre class of vulnerabilities, which earlier work had found by hand.</li>
+      <li>Up to 31× lower coverage-collection overhead than baseline techniques.</li>
+    </ul>
+    <p>
+      The rediscovery result is the one worth sitting with. A class of bugs
+      that once took manual expert analysis to find now falls out of an
+      automated, coverage-guided search.
+    </p>
+
+    <h2>Our take</h2>
+    <p>
+      The systems we depend on most are often ones we can't see inside,
+      whether that's a processor or a commercial AI model. Fuzzilicon shows
+      that rigorous, automated testing is still possible from the outside,
+      without the vendor's cooperation. That's the same principle behind
+      independent verification of AI agents: you shouldn't have to take a
+      system's safety on trust.
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>Want to talk to the research team?</h2>
+      <p>We're always happy to discuss the work behind Sentinel, or how it applies to your AI agents.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/en/contact/">Talk to us</a>
+    </div>
+  </div>
+</section>

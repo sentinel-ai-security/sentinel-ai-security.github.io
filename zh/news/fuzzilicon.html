@@ -1,0 +1,66 @@
+---
+layout: default
+lang: zh
+nav: research
+permalink: /zh/news/fuzzilicon/
+title: "Fuzzilicon：基于微码引导的x86 CPU硅后模糊测试"
+description: >-
+  我们关于通过微码对真实x86 CPU进行模糊测试的论文获得NDSS Symposium 2026杰出论文奖。这篇文章介绍Fuzzilicon的研究发现。
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <h1 style="max-width: 34ch;">NDSS 2026杰出论文：Fuzzilicon在真实x86 CPU中发现隐藏漏洞</h1>
+    <p class="hero-sub">
+      CPU漏洞通常是在芯片制造之前、在仿真环境中排查的。Fuzzilicon直接测试已经制造出来的芯片，通过对其微码进行插桩，发现了此前从未被报告过的漏洞。
+    </p>
+    <div class="post-meta">
+      <span>Sentinel Intelligence团队</span>
+      <span>·</span>
+      <span>2026年2月</span>
+      <span>·</span>
+      <a href="https://www.ndss-symposium.org/ndss-paper/fuzzilicon-a-post-silicon-microcode-guided-x86-cpu-fuzzer/" target="_blank" rel="noopener">在NDSS阅读论文 ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-body">
+    <a class="post-back" href="/zh/news/">← 返回动态</a>
+
+    <p>
+      我们的论文《Fuzzilicon: A Post-Silicon Microcode-Guided x86 CPU Fuzzer》获得NDSS Symposium 2026杰出论文奖（Distinguished Paper Award），NDSS是网络与系统安全领域的顶级会议之一。这项研究由Sentinel Intelligence联合创始人Lichao Wu，与达姆施塔特工业大学的Johannes Lenzen、Mohamadreza Rostami、Ahmad-Reza Sadeghi共同完成。
+    </p>
+
+    <h2>Fuzzilicon做了什么</h2>
+    <p>
+      模糊测试（fuzzing）通过向系统输入大量自动生成的数据，观察是否出现异常行为。对CPU而言，这通常意味着在仿真环境中对芯片设计进行模糊测试，这需要拿到芯片的源设计，而且可能遗漏真实硅片上才会出现的问题。Fuzzilicon是首个面向真实x86 CPU的硅后模糊测试框架。它通过逆向获得的Intel微码更新接口对微码进行插桩，在处理器运行时从内部获取反馈。
+    </p>
+    <ul>
+      <li>直接作用于已制造的芯片，无需芯片设计文件，也无需厂商支持。</li>
+      <li>在Intel Goldmont微架构上发现了五个问题，其中包括两个此前未知的微码级推测执行漏洞。</li>
+      <li>自动重新发现了µSpectre类漏洞，而此前这类漏洞是靠人工分析找到的。</li>
+      <li>覆盖率采集开销比基线方法最多降低31倍。</li>
+    </ul>
+    <p>
+      重新发现µSpectre这一点最值得关注。一类过去需要专家人工分析才能找到的漏洞，如今可以通过自动化、覆盖率引导的搜索被发现。
+    </p>
+
+    <h2>我们的看法</h2>
+    <p>
+      我们最依赖的系统，往往是我们无法看到内部的系统，无论是处理器还是商业AI模型。Fuzzilicon说明，即使没有厂商配合，也依然可以从外部进行严格的自动化测试。这与独立验证AI Agent背后的原则相同：系统是否安全，不应只靠信任。
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>想和研究团队聊聊？</h2>
+      <p>我们很乐意分享Sentinel背后的研究工作，或探讨它如何应用于你的AI Agent。</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/zh/contact/">联系我们</a>
+    </div>
+  </div>
+</section>

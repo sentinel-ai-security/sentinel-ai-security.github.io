@@ -22,7 +22,8 @@
     {% assign use_cases_url = '/zh/use-cases/' %}
     {% assign team_url = '/zh/team/' %}
     {% assign company_url = '/zh/company/' %}
-    {% assign research_url = '/zh/research/' %}
+    {% assign news_url = '/zh/news/' %}
+    {% assign careers_url = '/zh/careers/' %}
     {% assign contact_url = '/zh/contact/' %}
   {% else %}
     {% assign home_url = '/en/' %}
@@ -31,7 +32,8 @@
     {% assign use_cases_url = '/en/use-cases/' %}
     {% assign team_url = '/en/team/' %}
     {% assign company_url = '/en/company/' %}
-    {% assign research_url = '/en/research/' %}
+    {% assign news_url = '/en/news/' %}
+    {% assign careers_url = '/en/careers/' %}
     {% assign contact_url = '/en/contact/' %}
   {% endif %}
   <a class="skip-link" href="#main">{% if page.lang == 'zh' %}跳转到主内容{% else %}Skip to content{% endif %}</a>
@@ -42,7 +44,7 @@
         <span class="brand-mark" aria-hidden="true">
           <img src="{{ '/assets/images/brand/logo-mark.png' | relative_url }}" alt="" width="540" height="640">
         </span>
-        <span class="brand-name">SENTINEL <span class="brand-name-accent">ASSURANCE</span></span>
+        <span class="brand-name">SENTINEL <span class="brand-name-accent">INTELLIGENCE</span></span>
       </a>
 
       <nav class="main-nav" aria-label="Primary">
@@ -52,7 +54,8 @@
         <a href="{{ use_cases_url }}" {% if page.nav == 'use_cases' %}aria-current="page"{% endif %}>{{ t.nav.use_cases }}</a>
         <a href="{{ team_url }}" {% if page.nav == 'team' %}aria-current="page"{% endif %}>{{ t.nav.team }}</a>
         <a href="{{ company_url }}" {% if page.nav == 'company' %}aria-current="page"{% endif %}>{{ t.nav.company }}</a>
-        <a href="{{ research_url }}" {% if page.nav == 'research' %}aria-current="page"{% endif %}>{{ t.nav.research }}</a>
+        <a href="{{ news_url }}" {% if page.nav == 'research' %}aria-current="page"{% endif %}>{{ t.nav.research }}</a>
+        <a href="{{ careers_url }}" {% if page.nav == 'careers' %}aria-current="page"{% endif %}>{{ t.nav.careers }}</a>
       </nav>
 
       <div class="header-actions">
@@ -72,7 +75,8 @@
       <a href="{{ use_cases_url }}">{{ t.nav.use_cases }}</a>
       <a href="{{ team_url }}">{{ t.nav.team }}</a>
       <a href="{{ company_url }}">{{ t.nav.company }}</a>
-      <a href="{{ research_url }}">{{ t.nav.research }}</a>
+      <a href="{{ news_url }}">{{ t.nav.research }}</a>
+      <a href="{{ careers_url }}">{{ t.nav.careers }}</a>
       <a href="{{ contact_url }}">{{ t.nav.contact }}</a>
       <a class="mobile-lang" href="{{ t.lang_switch_href }}">{{ t.lang_switch_label }}</a>
     </div>
@@ -86,7 +90,7 @@
     <div class="wrap footer-inner">
       <div class="footer-top">
         <div class="footer-brand">
-          <span class="brand-name">SENTINEL <span class="brand-name-accent">ASSURANCE</span></span>
+          <span class="brand-name">SENTINEL <span class="brand-name-accent">INTELLIGENCE</span></span>
           <p class="footer-tagline">{{ t.footer_tagline }}</p>
         </div>
         <nav class="footer-nav" aria-label="Footer">
@@ -95,7 +99,8 @@
           <a href="{{ use_cases_url }}">{{ t.nav.use_cases }}</a>
           <a href="{{ team_url }}">{{ t.nav.team }}</a>
           <a href="{{ company_url }}">{{ t.nav.company }}</a>
-          <a href="{{ research_url }}">{{ t.nav.research }}</a>
+          <a href="{{ news_url }}">{{ t.nav.research }}</a>
+          <a href="{{ careers_url }}">{{ t.nav.careers }}</a>
           <a href="{{ contact_url }}">{{ t.nav.contact }}</a>
         </nav>
       </div>

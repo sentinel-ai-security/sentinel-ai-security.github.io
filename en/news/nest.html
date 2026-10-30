@@ -1,0 +1,89 @@
+---
+layout: default
+lang: en
+nav: research
+permalink: /en/news/nest/
+title: "NeST: Neuron Selective Tuning for LLM Safety"
+description: >-
+  Our paper on making LLMs safer by tuning only a small set of
+  safety-relevant neurons was accepted at IEEE S&P 2027. Here's what NeST
+  does.
+---
+
+<section class="hero" style="padding: 72px 0 80px;">
+  <div class="wrap">
+    <h1 style="max-width: 30ch;">NeST: making LLMs safer by tuning a few neurons, accepted at IEEE S&amp;P 2027</h1>
+    <p class="hero-sub">
+      Our earlier work showed that a small set of neurons holds up an LLM's
+      safety. NeST turns that around: tune only those neurons, and you get
+      close to the protection of full fine-tuning at a fraction of the
+      cost.
+    </p>
+    <div class="post-meta">
+      <span>By the Sentinel Intelligence team</span>
+      <span>·</span>
+      <span>2027</span>
+      <span>·</span>
+      <a href="https://arxiv.org/abs/2602.16835" target="_blank" rel="noopener">Read the paper on arXiv ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap post-body">
+    <a class="post-back" href="/en/news/">← Back to News</a>
+
+    <p>
+      Our paper, <strong>"NeST: Neuron Selective Tuning for LLM
+      Safety,"</strong> has been accepted at the IEEE Symposium on Security
+      and Privacy (S&amp;P) 2027, one of the top four venues in computer
+      security. The work is co-authored by Sentinel Intelligence co-founder
+      Lichao Wu, together with Sasha Behrouzi, Mohamadreza Rostami, and
+      Ahmad-Reza Sadeghi (Technical University of Darmstadt).
+    </p>
+
+    <h2>What NeST does</h2>
+    <p>
+      Making a model refuse harmful requests usually means costly
+      fine-tuning, and cheaper methods like LoRA give inconsistent safety
+      gains. NeST finds the feed-forward neurons that matter for safety,
+      groups neurons that behave alike, and trains a shared update for
+      each group while the rest of the model stays frozen.
+    </p>
+    <ul>
+      <li>Tested across 14 open-weight language and multimodal models.</li>
+      <li>On text-only models, average jailbreak success drops from 44.5% to 1.1%.</li>
+      <li>Trains about 0.4 million parameters on average, far fewer than full fine-tuning, while coming close to its robustness.</li>
+      <li>Trained only on plain harmful and benign prompts, with no jailbreak-specific data, yet it holds up against a wide range of jailbreaks.</li>
+      <li>The updates are folded back into the model's weights, so there's no extra cost when the model runs.</li>
+    </ul>
+    <p>
+      The generalization result is the one worth sitting with. A defense
+      that never saw a jailbreak during training still resists them, which
+      suggests it's fixing the underlying safety mechanism rather than
+      patching specific attacks.
+    </p>
+
+    <h2>Our take</h2>
+    <p>
+      Finding a weakness is half the job; the other half is fixing it
+      without breaking everything else. NeST builds on the same
+      neuron-level understanding as our attack work, NeuroStrike and
+      GateBreaker, and uses it for defense. Knowing exactly where safety
+      lives inside a model is what makes both precise testing and precise
+      repair possible.
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap cta-banner">
+    <div>
+      <h2>Want to talk to the research team?</h2>
+      <p>We're always happy to discuss the work behind Sentinel, or how it applies to your AI agents.</p>
+    </div>
+    <div class="cta-banner-actions">
+      <a class="btn btn-primary btn-lg" href="/en/contact/">Talk to us</a>
+    </div>
+  </div>
+</section>
